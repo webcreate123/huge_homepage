@@ -2232,8 +2232,22 @@ img {
     margin: 0;
 }
 
-.library__pickup .library__img {
+.library__img {
     aspect-ratio: 720/277;
+    overflow: hidden;
+}
+
+.library__pickup .library__img {
+    aspect-ratio: 720/377;
+    overflow: hidden;
+}
+
+.library__img img {
+    transition: transform 0.5s ease;
+}
+
+.library__item:hover .library__img img {
+    transform: scale(1.06);
 }
 
 .library__img img {
@@ -2254,10 +2268,14 @@ img {
     font-size: var(--font-size20);
     font-weight: bold;
     line-height: 1.5;
+    transition: color 0.5s ease, -webkit-text-fill-color 0.35s ease, background 0.35s ease;
 }
 
 .library__pickup .library__title {
     font-size: var(--font-size26);
+}
+
+.library__item:hover .library__title {
     background: linear-gradient(90deg, #F3941A 0%, #E9535E 20%, #7876C8 80%, #2EB484 100%);
     color: transparent;
     -webkit-text-fill-color: transparent;
