@@ -2,7 +2,7 @@
 @media (max-width: 991px) {
     :root {
         --pxunit: 8px;
-        --headerH: 70px;
+        --headerH: 85px;
     }
 }
 
@@ -23,9 +23,9 @@
         --font-size36: 1.8rem;
         --spacing-unit: .4rem;
         --border-radius: .4rem;
-        --margin-md: 2.5rem;
-        --margin-sm: 2rem;
+        --margin-lg: 2.5rem;
         --margin: 2.5rem;
+        --margin-sm: 2.5rem;
     }
 
     html {
@@ -40,7 +40,6 @@
 
 @media (max-width: 450px) {
     :root {
-        --pxunit: 7px;
         --font-size12: 1.2rem;
         --font-size14: 1.4rem;
         --font-size16: 1.6rem;
@@ -55,9 +54,9 @@
         --font-size36: 3.6rem;
         --spacing-unit: .7rem;
         --border-radius: .7rem;
-        --margin-md: 1.7rem;
-        --margin-sm: 1.7rem;
-        --margin: 1.7rem;
+        --margin-lg: 2rem;
+        --margin-sm: 2rem;
+        --margin: 2rem;
     }
 
     html {
@@ -78,7 +77,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 25px;
+        padding: 0 30px;
+    }
+
+    .header__set {
+        justify-content: space-between;
+    }
+
+    .header__left {
+        margin: 0;
     }
 
     .header__menu {
@@ -107,46 +114,57 @@
         gap: 30px;
     }
 
-    .header__deco {
-        display: none;
-    }
-
-    .header__menu--open {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        pointer-events: auto;
-    }
-
-    .header__menu-link {
-        font-size: 17px;
-        color: var(--bg-white-color);
-        height: auto;
+    .header__logo {
+        width: 110px;
     }
 
     .header__hamburger {
-        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+    }
+
+    .header__hamburger-btn {
+        background-color: transparent;
+        border: 1px solid var(--bg-white-color);
+        border-radius: 50%;
+        padding: 0;
+    }
+
+    .header__hamburger-txt {
+        display: none;
+    }
+
+    .header__hamburger-line-wrap {
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header__hamburger-line {
+        width: 55%;
+        height: 1px;
     }
 }
 
 @media (max-width: 450px) {
     .header {
-        padding: 0 15px;
+        padding: 0 2rem;
     }
 
     .header__logo {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        height: 4.5rem;
+        width: auto;
     }
 
-    .header__menu-cap-en {
-        font-size: 18px;
+    .header__logo img {
+        height: 100%;
+        width: auto;
     }
 
-    .header__menu-cap-jp {
-        font-size: 11px;
+    .header__hamburger {
+        width: 4.5rem;
+        height: 4.5rem;
     }
 }
 

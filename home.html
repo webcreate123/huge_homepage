@@ -1,3 +1,19 @@
+<?php
+    $AUTH_USER = 'huge';
+	$AUTH_PASS = 'huge';
+	header('Cache-Control: no-cache, must-revalidate, max-age=0');
+	$has_supplied_credentials = !(empty($_SERVER['PHP_AUTH_USER']) && empty($_SERVER['PHP_AUTH_PW']));
+	$is_not_authenticated = (
+		!$has_supplied_credentials ||
+		$_SERVER['PHP_AUTH_USER'] != $AUTH_USER ||
+		$_SERVER['PHP_AUTH_PW']   != $AUTH_PASS
+	);
+	if ($is_not_authenticated) {
+		header('HTTP/1.1 401 Authorization Required');
+		header('WWW-Authenticate: Basic realm="Access denied"');
+		exit;
+	}
+?>
 <!DOCTYPE html>
 <html lang="jp">
 
@@ -93,43 +109,43 @@
                     <div class="concept__inner">
                         <div class="concept__des">
                             <p>
-                                日本語に訳すと、「圧倒的な発想で、世界を感動させる」
+                                日本語に訳すと、<br class="is__SP" />「圧倒的な発想で、世界を感動させる」
                             </p>
                             <p>
                                 2025年に20周年を迎えたHUGEが、<br />
                                 2030年に向けて掲げているスローガンです。
                             </p>
                             <p>
-                                あくなき探究心。絶対的な顧客目線。<br />
-                                そして、ワクワクドキドキする気持ちを、どこまでも。
+                                あくなき探究心。<br class="is__SP" />絶対的な顧客目線。<br />
+                                そして、ワクワクドキドキする気持ちを、<br class="is__SP" />どこまでも。
                             </p>
                             <p>
-                                レストランを起点に、新業態へ、海外へ、ホスピタリティのその先へ。<br />
+                                レストランを起点に、<br class="is__SP" />新業態へ、海外へ、ホスピタリティのその先へ。<br />
                                 HUGEは、いまも挑戦の途中です。
                             </p>
                             <p>
-                                その一歩一歩に、一緒にワクワクしてくれる仲間を募集します。
+                                その一歩一歩に、<br class="is__SP" />一緒にワクワクしてくれる仲間を募集します。
                             </p>
                             <p>
                                 お客様の一日を、人生の宝物に変える。<br />
-                                そんな奇跡みたいな瞬間を、本気でつくる仕事です。
+                                そんな奇跡みたいな瞬間を、<br class="is__SP" />本気でつくる仕事です。
                             </p>
                         </div>
-                        <div class="concept__marquee">
-                            <div class="concept__marquee-inner">
-                                <div class="concept__marquee-slider">
-                                    <div class="concept__marquee-slider-wrap">
-                                        <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
-                                        <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
-                                        <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
-                                    </div>
+                    </div>
+                    <div class="concept__marquee">
+                        <div class="concept__marquee-inner">
+                            <div class="concept__marquee-slider">
+                                <div class="concept__marquee-slider-wrap">
+                                    <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
+                                    <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
+                                    <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
                                 </div>
-                                <div class="concept__marquee-slider">
-                                    <div class="concept__marquee-slider-wrap">
-                                        <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
-                                        <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
-                                        <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
-                                    </div>
+                            </div>
+                            <div class="concept__marquee-slider">
+                                <div class="concept__marquee-slider-wrap">
+                                    <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
+                                    <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
+                                    <div class="concept__marquee-slider-item">Think HUGE. Make a World of Wonder.</div>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +210,9 @@
                                 </ul>
                             </div>
                         </div>
-                        
+                        <div class="news__paint">
+                            <img src="img/news_paint.svg">
+                        </div>
                     </div>
                     <div class="hx12"></div>
                 </section>
@@ -218,8 +236,9 @@
                                     <div class="message__txt">
                                         <p>
                                             お客様の期待値を超え続ける。<br />
-                                            その真っ直ぐなチャレンジが「ありがとう」の数を生み出す。<br />
-                                            この幸福なコミュニケーションは、どんなに時代が変わっても<br />
+                                            その真っ直ぐなチャレンジが<br class="is__SP" />
+                                            「ありがとう」の数を生み出す。<br />
+                                            この幸福なコミュニケーションは、<br class="is__SP" />どんなに時代が変わっても<br />
                                             誰もがリアルで求め続けるあたたかなもの。<br />
                                             「ありがとう」と言っていただける商売こそ、<br />
                                             真っ直ぐ楽しい商売ではないだろうか？
@@ -242,15 +261,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="message__paint">
+                            <img src="img/message_paint.png">
+                        </div>
                     </div>
                     <div class="hx12"></div>
                 </section>
                 <section class="home__campaign">
                     <div class="hx14"></div>
                     <div class="container-sm">
-                        <div class="campaign__inner">
+                        <a class="campaign__inner" href="#">
                             <div class="campaign__bg">
-                                <img src="img/campaign_bg.png">
+                                <picture>
+                                    <source srcset="img/campaign_bg_sp.png" media="(max-width: 768px)">
+                                    <img src="img/campaign_bg.png">
+                                </picture>
                             </div>
                             <div class="campaign__content">
                                 <div class="campaign__mark">
@@ -259,18 +284,21 @@
                                 <div class="campaign__main">
                                     <div class="campaign__txt">
                                         HUGEは2025年に創業20年を迎えました。<br />
-                                        最高の仲間たちと共に積み重ねたHUGEを物語る数字やキーワード、<br />
+                                        最高の仲間たちと共に積み重ねたHUGEを物語る数字やキーワード、<br class="is__PC" />
                                         整備してきた働く環境、独自の制度や福利厚生など。<br />
-                                        活躍していただくうえで、皆さんに知ってほしいことを<br />
+                                        活躍していただくうえで、皆さんに知ってほしいことを<br class="is__PC" />
                                         まとめています。
                                     </div>
-                                    <a class="campaign__arrow" href="#">
+                                    <div class="campaign__arrow">
                                         <svg viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.1549 1.06074L26.2058 10.1117L17.1549 19.1627M25.0745 10.1117L0.749983 10.1117" stroke="#333333" stroke-width="1.5" stroke-linecap="square"/>
                                         </svg>                                            
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
+                        </a>
+                        <div class="campaign__paint">
+                            <img src="img/campaign_paint.png">
                         </div>
                     </div>
                     <div class="hx14"></div>
@@ -310,7 +338,51 @@
                                     </div>
                                     <div class="interview__main">
                                         <div class="interview__category-list">
-                                            <span class="interview__category">スタッフ入社→社員</span>
+                                            <span class="interview__category interview__category--entry">スタッフ入社→社員</span>
+                                            <span class="interview__category">大卒</span>
+                                        </div>
+                                        <div class="interview__txt">
+                                            <p>
+                                                スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！  
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="interview__name">ホール</div>
+                                </div>
+                                <div class="interview__item">
+                                    <div class="interview__video">
+                                        <img src="img/interview_img.png">
+                                        <span class="interview__btn">
+                                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
+                                            </svg>                                            
+                                        </span>
+                                    </div>
+                                    <div class="interview__main">
+                                        <div class="interview__category-list">
+                                            <span class="interview__category interview__category--newgrad">新卒入社</span>
+                                            <span class="interview__category">大卒</span>
+                                        </div>
+                                        <div class="interview__txt">
+                                            <p>
+                                                スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！  
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="interview__name">シェフ</div>
+                                </div>
+                                <div class="interview__item">
+                                    <div class="interview__video">
+                                        <img src="img/interview_img.png">
+                                        <span class="interview__btn">
+                                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
+                                            </svg>                                            
+                                        </span>
+                                    </div>
+                                    <div class="interview__main">
+                                        <div class="interview__category-list">
+                                            <span class="interview__category interview__category--entry">スタッフ入社→社員</span>
                                             <span class="interview__category">大卒</span>
                                         </div>
                                         <div class="interview__txt">
@@ -332,7 +404,7 @@
                                     </div>
                                     <div class="interview__main">
                                         <div class="interview__category-list">
-                                            <span class="interview__category">スタッフ入社→社員</span>
+                                            <span class="interview__category interview__category--entry">スタッフ入社→社員</span>
                                             <span class="interview__category">大卒</span>
                                         </div>
                                         <div class="interview__txt">
@@ -341,54 +413,16 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="interview__name">International Leader</div>
-                                </div>
-                                <div class="interview__item">
-                                    <div class="interview__video">
-                                        <img src="img/interview_img.png">
-                                        <span class="interview__btn">
-                                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
-                                            </svg>                                            
-                                        </span>
-                                    </div>
-                                    <div class="interview__main">
-                                        <div class="interview__category-list">
-                                            <span class="interview__category">スタッフ入社→社員</span>
-                                            <span class="interview__category">大卒</span>
-                                        </div>
-                                        <div class="interview__txt">
-                                            <p>
-                                                スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！  
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="interview__name">International Leader</div>
-                                </div>
-                                <div class="interview__item">
-                                    <div class="interview__video">
-                                        <img src="img/interview_img.png">
-                                        <span class="interview__btn">
-                                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
-                                            </svg>                                            
-                                        </span>
-                                    </div>
-                                    <div class="interview__main">
-                                        <div class="interview__category-list">
-                                            <span class="interview__category">スタッフ入社→社員</span>
-                                            <span class="interview__category">大卒</span>
-                                        </div>
-                                        <div class="interview__txt">
-                                            <p>
-                                                スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！  
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="interview__name">International Leader</div>
+                                    <div class="interview__name">キッチン</div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="interview__paint interview__paint01">
+                        <img src="img/interview_paint01.svg">
+                    </div>
+                    <div class="interview__paint interview__paint02">
+                        <img src="img/interview_paint02.png">
                     </div>
                 </section>
                 <section class="home__library">
@@ -569,6 +603,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="library__paint">
+                        <img src="img/library_paint.png">
+                    </div>
                     <div class="hx16"></div>
                 </section>
                 <section class="home__entry">
@@ -635,6 +672,9 @@
                                 </div>
                             </a>
                         </div>
+                    </div>
+                    <div class="entry__paint">
+                        <img src="img/entry_paint.svg">
                     </div>
                     <div class="hx10"></div>
                 </section>
