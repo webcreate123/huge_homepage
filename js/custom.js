@@ -4,6 +4,7 @@ function headerSet() {
 	const bannerSection = document.querySelector(".banner");
 	const defaultLogoSrc = "img/header_logo.svg";
 	const changedLogoSrc = "img/hd_change_logo.svg";
+	const shouldApplyHeaderState = !document.querySelector(".header")?.classList.contains("no-header-state-update");
 
 	function updateHeaderState() {
 		const header = document.querySelector(".header");
@@ -28,9 +29,11 @@ function headerSet() {
 		}
 	}
 
-	window.addEventListener("scroll", updateHeaderState);
-	window.addEventListener("resize", updateHeaderState);
-	updateHeaderState();
+	if (shouldApplyHeaderState) {
+		window.addEventListener("scroll", updateHeaderState);
+		window.addEventListener("resize", updateHeaderState);
+		updateHeaderState();
+	}
 
 	function closeHeaderSidebar() {
 		document.body.classList.remove("is-header-sidebar-open");
