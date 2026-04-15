@@ -103,9 +103,6 @@
         min-width: 0;
         top: 0;
     }
-    body.is-header-sidebar-open .header__sidebar {
-        padding-top: 100px;
-    }
     .header__sidebar-nav {
         gap: 1.75rem;
     }
@@ -153,6 +150,19 @@
         transform: translateY(calc(-1 * (var(--spacing-unit) * 1.2 + -0.2rem))) rotate(-22deg);
     }
 
+    .interview-modal__video-wrap video {
+        aspect-ratio: unset;
+    }
+    .interview-modal__video-wrap {
+        width: 100%;
+    }
+    .interview-modal__close {
+        margin-right: unset;
+        margin-top: unset;
+    }
+    .interview-modal__entry-item {
+        width: 100%;
+    }
 
 }
 @media (max-width: 768px) {
@@ -161,6 +171,37 @@
     }
     .header__hamburger-btn--open .header__hamburger-line:nth-child(2) {
         transform: translateY(calc(-1 * (var(--spacing-unit) * 1.2 + -0.3rem))) rotate(-22deg);
+    }
+    .interview__slider .swiper-button-next {
+        position: absolute;
+        top: 33%;
+        transform: translateY(-61%);
+        right: calc(50% - 9.5rem);
+    }
+    .interview__slider .swiper-button-prev {
+        position: absolute;
+        top: 33%;
+        transform: translateY(-61%);
+        left: calc(50% - 9.5rem);
+    }
+    .interview__slider .swiper-pagination {
+        display: none;
+    }
+    .interview-modal__dialog {
+        width: min(102.4rem, calc(100% - 20rem));
+    }
+    .interview-modal__entry .entry__arrow {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media(max-width: 575px) {
+    .interview__slider .swiper-button-next {
+        right: calc(50% - 14.8rem);
+    }
+    .interview__slider .swiper-button-prev {
+        left: calc(50% - 14.8rem);
     }
 }
 @media (max-width: 450px) {
@@ -176,9 +217,6 @@
     .header__sidebar-nav {
         max-width: 240px;
         margin: 0 auto;
-    }
-    body.is-header-sidebar-open .header__sidebar {
-        padding-top: 190px;
     }
     .header__sidebar-en {
         font-size: 38px;
@@ -211,6 +249,9 @@
         width: 100%;
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+    .interview-modal__dialog {
+        width: calc(100% - 3rem);
     }
 }
 

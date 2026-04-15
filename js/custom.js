@@ -1,15 +1,36 @@
 function headerSet() {
 	const stickyHeaderTop = 100;
-	window.addEventListener("scroll", function () {
+	const logoImg = document.querySelector(".header__logo img");
+	const bannerSection = document.querySelector(".banner");
+	const defaultLogoSrc = "img/header_logo.svg";
+	const changedLogoSrc = "img/hd_change_logo.svg";
+
+	function updateHeaderState() {
 		const header = document.querySelector(".header");
-		if (window.scrollY > stickyHeaderTop) {
+		let triggerPoint = stickyHeaderTop;
+
+		if (bannerSection) {
+			triggerPoint = bannerSection.offsetTop + bannerSection.offsetHeight;
+		}
+
+		if (window.scrollY > triggerPoint) {
 			if (header && !header.classList.contains("pst_blackheader")) {
 				header.classList.add("pst_blackheader");
 			}
+			if (logoImg && !logoImg.getAttribute("src")?.includes("hd_change_logo.svg")) {
+				logoImg.setAttribute("src", changedLogoSrc);
+			}
 		} else {
 			header?.classList.remove("pst_blackheader");
+			if (logoImg && !logoImg.getAttribute("src")?.includes("header_logo.svg")) {
+				logoImg.setAttribute("src", defaultLogoSrc);
+			}
 		}
-	});
+	}
+
+	window.addEventListener("scroll", updateHeaderState);
+	window.addEventListener("resize", updateHeaderState);
+	updateHeaderState();
 
 	function closeHeaderSidebar() {
 		document.body.classList.remove("is-header-sidebar-open");
@@ -193,6 +214,66 @@ function textAnimation() {
 	});
 }
 
+function bannerIntroAnimation() {
+	const bannerBg = document.querySelector(".banner__bg");
+	const bannerBottom = document.querySelector(".banner__bottom");
+	const bannerTitle = document.querySelector(".banner__title");
+	const bannerVideo = document.querySelector(".banner__video");
+	const header = document.querySelector(".header");
+
+	if (!bannerBg || !bannerBottom || !bannerTitle || !bannerVideo || !header || typeof gsap === "undefined") return;
+
+	const timeline = gsap.timeline();
+
+	gsap.set(bannerBg, { autoAlpha: 0 });
+	gsap.set(bannerBottom, { autoAlpha: 0, y: 40 });
+	gsap.set(header, { autoAlpha: 0 });
+	gsap.set(bannerTitle, { autoAlpha: 0, y: 0 });
+	gsap.set(bannerVideo, { autoAlpha: 0, y: 0 });
+
+	timeline
+		.to(bannerBg, {
+			autoAlpha: 1,
+			duration: 0.9,
+			ease: "power2.out",
+		})
+		.to(
+			[bannerBottom, header],
+			{
+				autoAlpha: 1,
+				y: 0,
+				duration: 0.75,
+				ease: "power2.out",
+				stagger: 0.08,
+			},
+			"+=0.1"
+		)
+		.to(
+			bannerBottom,
+			{
+				autoAlpha: 0,
+				y: 30,
+				duration: 0.55,
+				ease: "power2.in",
+			},
+			"+=0.35"
+		)
+		.to(
+			[bannerTitle, bannerVideo],
+			{
+				autoAlpha: 1,
+				y: 0,
+				duration: 0.7,
+				ease: "power2.out",
+				stagger: 0.08,
+				onComplete: () => {
+					gsap.set(bannerBottom, { display: "none" });
+				},
+			},
+			"<0.12"
+		);
+}
+
 function accordionSetting() {
 	const patientsItems = document.querySelectorAll(".patients__faq-item");
 
@@ -258,6 +339,102 @@ function tocSetting() {
 }
 
 function sliderSetting() {
+	function setupInterviewModal(interviewRoot) {
+		const modalEl = document.querySelector(".js-interview-modal");
+		const modalVideo = modalEl?.querySelector(".js-interview-modal-video");
+		const modalEntry = modalEl?.querySelector(".js-interview-modal-entry");
+		const entrySource = document.querySelector(".home__entry .entry__content");
+		if (!modalEl || !modalVideo || !modalEntry || !entrySource || !interviewRoot) return;
+
+		if (!modalEntry.children.length) {
+			entrySource.querySelectorAll(".entry__item").forEach((entryItem) => {
+				const clone = entryItem.cloneNode(true);
+				clone.classList.add("interview-modal__entry-item");
+				modalEntry.appendChild(clone);
+			});
+		}
+
+		function closeModal() {
+			modalEl.classList.remove("is-open");
+			modalEl.setAttribute("aria-hidden", "true");
+			document.documentElement.classList.remove("hide-scroll");
+			document.body.classList.remove("hide-scroll");
+			modalVideo.pause();
+			modalVideo.removeAttribute("src");
+			modalVideo.removeAttribute("poster");
+			modalVideo.load();
+		}
+
+		function openModal(videoEl) {
+			const source = videoEl.getAttribute("src");
+			if (!source) return;
+
+			modalVideo.setAttribute("src", source);
+			const poster = videoEl.getAttribute("poster");
+			if (poster) {
+				modalVideo.setAttribute("poster", poster);
+			}
+
+			modalEl.classList.add("is-open");
+			modalEl.setAttribute("aria-hidden", "false");
+			document.documentElement.classList.add("hide-scroll");
+			document.body.classList.add("hide-scroll");
+
+			modalVideo.currentTime = 0;
+			const playPromise = modalVideo.play();
+			if (playPromise && typeof playPromise.catch === "function") {
+				playPromise.catch(() => {});
+			}
+		}
+
+		interviewRoot.querySelectorAll(".js-interview-modal-trigger").forEach((slideEl) => {
+			const videoEl = slideEl.querySelector("video");
+			if (!videoEl) return;
+
+			slideEl.addEventListener("click", () => {
+				openModal(videoEl);
+			});
+			slideEl.addEventListener("keydown", (event) => {
+				if (event.key === "Enter" || event.key === " ") {
+					event.preventDefault();
+					openModal(videoEl);
+				}
+			});
+		});
+
+		modalEl.querySelectorAll(".js-interview-modal-close").forEach((closeButton) => {
+			closeButton.addEventListener("click", closeModal);
+		});
+
+		document.addEventListener("keydown", (event) => {
+			if (event.key === "Escape" && modalEl.classList.contains("is-open")) {
+				closeModal();
+			}
+		});
+	}
+
+	function resetInterviewVideoToPoster(videoEl) {
+		videoEl.pause();
+		videoEl.currentTime = 0;
+		videoEl.load();
+	}
+
+	function syncInterviewSlideVideos(swiperInstance) {
+		swiperInstance.slides.forEach((slide, slideIndex) => {
+			const videoEl = slide.querySelector("video");
+			if (!videoEl) return;
+
+			if (slideIndex === swiperInstance.activeIndex) {
+				const playPromise = videoEl.play();
+				if (playPromise && typeof playPromise.catch === "function") {
+					playPromise.catch(() => {});
+				}
+				return;
+			}
+
+			resetInterviewVideoToPoster(videoEl);
+		});
+	}
 
 	// Gallery strips (home: .gallery__slider--ltr / --rtl; autoplay opposite directions)
 	const galleryLtrEl = document.querySelector(".gallery__slider--ltr");
@@ -312,18 +489,26 @@ function sliderSetting() {
 	// Interview (home only — other pages reuse .interview__slider without Swiper markup)
 	const interviewSliderEl = document.querySelector(".home__interivew .interview__slider");
 	if (interviewSliderEl && typeof Swiper !== 'undefined') {
+		setupInterviewModal(interviewSliderEl);
+
+		interviewSliderEl.querySelectorAll("video").forEach(videoEl => {
+			videoEl.removeAttribute("autoplay");
+			resetInterviewVideoToPoster(videoEl);
+		});
+
 		new Swiper(".home__interivew .interview__slider", {
 			loop: !1,
 			speed: 500,
 			slidesPerView: 1.5,
+			centeredSlides: true,
 			spaceBetween: 20,
 			pagination: {
 				el: ".home__interivew .interview__pagination",
 				clickable: true,
 			},
 			navigation: {
-				nextEl: ".home__interivew .swiper-button-prev",
-				prevEl: ".home__interivew .swiper-button-next",
+				nextEl: ".home__interivew .swiper-button-next",
+				prevEl: ".home__interivew .swiper-button-prev",
 			},
 			breakpoints: {
 				576: {
@@ -332,11 +517,26 @@ function sliderSetting() {
 				},
 				768: {
 					slidesPerView: 3.5,
-					spaceBetween: 28,
+					spaceBetween: 24,
 				},
 				991: {
 					slidesPerView: 4.5,
 					spaceBetween: 24,
+				},
+				1280: {
+					slidesPerView: 4.5,
+					spaceBetween: 48,
+				},
+			},
+			on: {
+				init(swiperInstance) {
+					syncInterviewSlideVideos(swiperInstance);
+				},
+				slideChange(swiperInstance) {
+					syncInterviewSlideVideos(swiperInstance);
+				},
+				resize(swiperInstance) {
+					syncInterviewSlideVideos(swiperInstance);
 				},
 			},
 		});
@@ -345,6 +545,7 @@ function sliderSetting() {
 
 
 function init() {
+	bannerIntroAnimation();
 	headerSet();
 	lenisSetting();
 	setupInviewAnimations();
