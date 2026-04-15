@@ -577,6 +577,7 @@ function parttimeItemAccordion() {
 				}
 			});
 			item.classList.toggle("-open");
+			setTimeout(() => ScrollTrigger.refresh(), 100);
 		});
 
 		const closeBtn = item.querySelector(".area__close-btn");
@@ -584,6 +585,7 @@ function parttimeItemAccordion() {
 			e.preventDefault();
 			e.stopPropagation();
 			item.classList.remove("-open");
+			setTimeout(() => ScrollTrigger.refresh(), 100);
 		});
 	});
 }
