@@ -79,7 +79,7 @@
                     </a>
                 </div>
                 <div class="header__hamburger js_hamburger">
-                    <button class="header__hamburger-btn">
+                    <button type="button" class="header__hamburger-btn" aria-expanded="false" aria-controls="header-sidebar">
                         <div class="header__hamburger-line-wrap">
                             <span class="header__hamburger-line"></span>
                             <span class="header__hamburger-line"></span>
@@ -88,6 +88,24 @@
                     </button>
                 </div>
             </div>
+            <div class="header__sidebar-overlay" aria-hidden="true"></div>
+            <aside id="header-sidebar" class="header__sidebar" aria-label="サイトメニュー" aria-hidden="true">
+                <nav class="header__sidebar-nav">
+                    <a class="header__sidebar-link" href="#">
+                        <span class="header__sidebar-en">NEW GRAD</span>
+                        <span class="header__sidebar-jp">新卒採用</span>
+                    </a>
+                    <a class="header__sidebar-link header__sidebar-link--single" href="#">3分でわかるHUGE</a>
+                    <a class="header__sidebar-link" href="#">
+                        <span class="header__sidebar-en">CAREER</span>
+                        <span class="header__sidebar-jp">中途採用</span>
+                    </a>
+                    <a class="header__sidebar-link" href="#">
+                        <span class="header__sidebar-en">PART-TIME</span>
+                        <span class="header__sidebar-jp">アルバイト採用</span>
+                    </a>
+                </nav>
+            </aside>
         </header>
         <!-- HEADER_END -->
         <!-- CONTAIN_START -->

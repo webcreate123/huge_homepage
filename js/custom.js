@@ -11,9 +11,27 @@ function headerSet() {
 		}
 	});
 
+	function closeHeaderSidebar() {
+		document.body.classList.remove("is-header-sidebar-open");
+		const btn = document.querySelector(".header__hamburger-btn");
+		btn?.classList.remove("header__hamburger-btn--open");
+		btn?.setAttribute("aria-expanded", "false");
+		btn?.setAttribute("aria-label", "メニューを開く");
+		document.querySelector(".header__sidebar")?.setAttribute("aria-hidden", "true");
+		document.querySelector(".header__sidebar-overlay")?.setAttribute("aria-hidden", "true");
+		document.documentElement.classList.remove("hide-scroll");
+		document.body.classList.remove("hide-scroll");
+	}
+
 	document.querySelector(".js_hamburger")?.addEventListener("click", function () {
+		document.body.classList.toggle("is-header-sidebar-open");
 		document.querySelector(".header__hamburger-btn")?.classList.toggle("header__hamburger-btn--open");
-		document.querySelector(".header__menu")?.classList.toggle("header__menu--open");
+		const isOpen = document.body.classList.contains("is-header-sidebar-open");
+		const btn = document.querySelector(".header__hamburger-btn");
+		btn?.setAttribute("aria-expanded", isOpen ? "true" : "false");
+		btn?.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+		document.querySelector(".header__sidebar")?.setAttribute("aria-hidden", isOpen ? "false" : "true");
+		document.querySelector(".header__sidebar-overlay")?.setAttribute("aria-hidden", isOpen ? "false" : "true");
 
 		const nav = document.querySelector(".navigation-main-hp");
 		if (nav) {
@@ -26,6 +44,20 @@ function headerSet() {
 
 		document.documentElement.classList.toggle("hide-scroll");
 		document.body.classList.toggle("hide-scroll");
+	});
+
+	document.querySelector(".header__sidebar-overlay")?.addEventListener("click", closeHeaderSidebar);
+
+	document.querySelectorAll(".header__sidebar-link").forEach(link => {
+		link.addEventListener("click", function () {
+			closeHeaderSidebar();
+		});
+	});
+
+	document.addEventListener("keydown", function (e) {
+		if (e.key === "Escape" && document.body.classList.contains("is-header-sidebar-open")) {
+			closeHeaderSidebar();
+		}
 	});
 
 	document.querySelectorAll(".header__menu-link").forEach(link => {
