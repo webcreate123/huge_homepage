@@ -1898,7 +1898,8 @@ img {
     padding: 2.5rem 1rem 2rem 2.8rem;
 }
 
-.message__video img {
+.message__video img,
+.message__video video {
     width: 100%;
 }
 
