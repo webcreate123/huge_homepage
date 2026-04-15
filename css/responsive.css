@@ -127,6 +127,19 @@
         padding: 0;
     }
 
+    .header.no-header-state-update .header__hamburger-btn {
+        border: 1px solid #333333;
+    }
+
+    .header.no-header-state-update .header__set {
+        position: fixed;
+        z-index: 112;
+    }
+    
+    .header.no-header-state-update .header__hamburger-line {
+        background-color: #333333;
+    }
+
     .header__hamburger-txt {
         display: none;
     }

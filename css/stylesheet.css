@@ -1154,6 +1154,69 @@ img {
     width: 1.4rem;
 }
 
+.header__menu--newgrad {
+    gap: calc(var(--spacing-unit)*3.2);
+}
+
+.header__quick-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing-unit)*.8);
+    color: var(--bg-font-color);
+    font-size: var(--font-size18);
+    font-family: var(--fontB);
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.header__quick-arrow {
+    display: inline-block;
+    font-size: 1.1rem;
+    transform: translateY(-.05rem);
+}
+
+.header__entry-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20rem;
+    height: var(--headerH);
+    padding: 0 calc(var(--spacing-unit)*2.8);
+    color: var(--bg-font-color);
+    background: linear-gradient(91.9deg, #2EB484 1.6%, #9CE1C9 98.4%);
+    font-family: var(--fontLexendDeca);
+    font-weight: 700;
+}
+
+.header__entry-btn.career_bg {
+    background: linear-gradient(91.9deg, #F3941A 1.6%, #FBC177 98.4%);
+}
+
+.header__entry-btn.newgrad_bg {
+    background: linear-gradient(47.19deg, #FFD700 24.04%, #FBE881 75.96%);
+}
+
+.header__entry-label {
+    font-size: 2.5rem;
+    letter-spacing: .04em;
+    line-height: 1;
+}
+
+.header__entry-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    color: var(--bg-white-color);
+    background-color: var(--bg-font-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
 .header__hamburger {
     display: flex;
     width: var(--headerH);
@@ -3005,9 +3068,6 @@ body.is-header-sidebar-open .header__sidebar {
     width: 100%;
 }
 
-.library__bottom {
-    display: none;
-}
 
 @media (max-width: 768px) {
     .library__paint {
