@@ -258,112 +258,91 @@ function tocSetting() {
 }
 
 function sliderSetting() {
-	// Banner Gallery
-	const bannerGalleryEl = document.querySelector(".banner__gallery");
-	if (bannerGalleryEl && typeof Swiper !== 'undefined') {
-		const bannerGallery = new Swiper(".banner__gallery", {
+
+	// Gallery strips (home: .gallery__slider--ltr / --rtl; autoplay opposite directions)
+	const galleryLtrEl = document.querySelector(".gallery__slider--ltr");
+	const galleryRtlEl = document.querySelector(".gallery__slider--rtl");
+	if (galleryLtrEl && galleryRtlEl && typeof Swiper !== "undefined") {
+		const galleryBase = {
 			loop: true,
-			speed: 1000,
+			allowTouchMove: false,
+			draggable: false,
+			grabCursor: false,
+			// Long duration + linear easing (CSS) = steady flow, no ease-in-out
+			speed: 4000,
+			slidesPerView: 1.5,
+			spaceBetween: 0,
 			autoplay: {
-				delay: 3000,
+				delay: 1,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: false,
+				waitForTransition: true,
 			},
+			breakpoints: {
+				450: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+				},
+				768: {
+					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+				991: {
+					slidesPerView: 3.2,
+					spaceBetween: 0,
+				},
+			},
+		};
+		new Swiper(galleryLtrEl, {
+			...galleryBase,
+			autoplay: {
+				...galleryBase.autoplay,
+				reverseDirection: true,
+			},
+		});
+		new Swiper(galleryRtlEl, {
+			...galleryBase,
+			autoplay: {
+				...galleryBase.autoplay,
+				reverseDirection: false,
+			},
+		});
+	}
+
+	// Interview (home only — other pages reuse .interview__slider without Swiper markup)
+	const interviewSliderEl = document.querySelector(".home__interivew .interview__slider");
+	if (interviewSliderEl && typeof Swiper !== 'undefined') {
+		new Swiper(".home__interivew .interview__slider", {
+			loop: !1,
+			speed: 500,
+			slidesPerView: 1.5,
+			spaceBetween: 20,
 			pagination: {
-				el: ".swiper-pagination",
+				el: ".home__interivew .interview__pagination",
+				clickable: true,
 			},
-		});
-	}
-
-	// News Gallery
-	const newsGalleryEl = document.querySelector(".news__content");
-	if (newsGalleryEl && typeof Swiper !== 'undefined') {
-		const newsGallery = new Swiper(".news__content", {
-			loop: !1,
-			speed: 500,
-			slidesPerView: 1,
-			spaceBetween: 20,
 			navigation: {
-				nextEl: ".news__content .swiper-button-next",
-				prevEl: ".news__content .swiper-button-prev",
+				nextEl: ".home__interivew .swiper-button-prev",
+				prevEl: ".home__interivew .swiper-button-next",
 			},
 			breakpoints: {
-				450: {
-					slidesPerView: 1,
-					spaceBetween: 20,
-				},
 				576: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					slidesPerView: 2.5,
+					spaceBetween: 24,
 				},
 				768: {
-					slidesPerView: 3,
-					spaceBetween: 25,
+					slidesPerView: 3.5,
+					spaceBetween: 28,
 				},
 				991: {
-					slidesPerView: 3.6,
-					spaceBetween: 30,
-				},
-			},
-		});
-	}
-
-	// Member Gallery
-	const memberGalleryEl = document.querySelector(".member__content");
-	if (memberGalleryEl && typeof Swiper !== 'undefined') {
-		const memberGallery = new Swiper(".member__content", {
-			loop: !1,
-			speed: 500,
-			slidesPerView: 1.7,
-			spaceBetween: 20,
-			navigation: {
-				nextEl: ".member__content .swiper-button-next",
-				prevEl: ".member__content .swiper-button-prev",
-			},
-			breakpoints: {
-				450: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				768: {
-					slidesPerView: 4,
-					spaceBetween: 25,
-				},
-				991: {
-					slidesPerView: 5,
-					spaceBetween: 30,
-				},
-			},
-		});
-	}
-
-	// Goods Gallery
-	const goodsGalleryEl = document.querySelector(".goods__content");
-	if (goodsGalleryEl && typeof Swiper !== 'undefined') {
-		const goodsGallery = new Swiper(".goods__content", {
-			loop: !1,
-			speed: 500,
-			slidesPerView: 1.2,
-			spaceBetween: 15,
-			navigation: {
-				nextEl: ".goods__content .swiper-button-next",
-				prevEl: ".goods__content .swiper-button-prev",
-			},
-			breakpoints: {
-				450: {
-					slidesPerView: 2,
-					spaceBetween: 15,
-				},
-				768: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				991: {
-					slidesPerView: 4,
-					spaceBetween: 25,
+					slidesPerView: 4.5,
+					spaceBetween: 24,
 				},
 			},
 		});
 	}
 }
+
 
 function init() {
 	headerSet();

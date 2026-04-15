@@ -2433,7 +2433,7 @@ body.is-header-sidebar-open .header__sidebar {
 }
 
 .interview__paint02 {
-    bottom: 0;
+    bottom: 15rem;
     left: 0;
     display: flex;
     width: 39rem;
@@ -2477,16 +2477,93 @@ body.is-header-sidebar-open .header__sidebar {
     line-height: 2;
 }
 
-.interview__slider {
+.interview__content {
     display: flex;
+    flex-direction: column;
     gap: calc(var(--spacing-unit)*6);
+    padding: 0;
+}
+
+.interview__slider {
+    width: 100%;
+}
+
+.interview__slider .swiper-wrapper {
+    align-items: stretch;
 }
 
 .interview__item {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing-unit)*2);
-    width: 23%;
+    height: auto;
+}
+
+.interview__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing-unit)*4);
+    margin-top: calc(var(--spacing-unit)*8);
+}
+
+.interview__slider .swiper-button-prev,
+.interview__slider .swiper-button-next {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 0;
+    width: 5.5rem;
+    height: 5.5rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-font-color);
+    background-color: var(--bg-font-color);
+    border-radius: 50%;
+    transition: opacity 0.5s;
+}
+
+.interview__slider .swiper-button-prev::after,
+.interview__slider .swiper-button-next::after {
+    display: none;
+}
+
+.interview__slider .swiper-button-prev svg,
+.interview__slider .swiper-button-next svg {
+    display: block;
+    width: 1.9rem;
+    height: auto;
+}
+
+.interview__slider .swiper-button-disabled {
+    opacity: 0 !important;
+}
+
+.interview__slider .swiper-pagination {
+    position: static;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing-unit)*1.2);
+}
+
+.interview__slider .swiper-pagination-bullet {
+    margin: 0 !important;
+    width: 1rem;
+    height: 1rem;
+    background: #D9D9D9;
+    opacity: 1;
+    transition: transform 0.5s;
+}
+
+.interview__slider .swiper-pagination-bullet-active {
+    transform: scale();
+    background-color: var(--bg-pink-color);
 }
 
 .interview__video {
@@ -2574,6 +2651,26 @@ body.is-header-sidebar-open .header__sidebar {
 
     .interview__paint02 {
         width: 13rem;
+        bottom: 7rem;
+    }
+
+    .interview__btn {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .interview__slider .swiper-button-prev, .interview__slider .swiper-button-next {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .interview__slider .swiper-button-prev svg, .interview__slider .swiper-button-next svg {
+        width: 1rem;
+    }
+
+    .interview__slider .swiper-pagination-bullet {
+        width: .7rem;
+        height: .7rem;
     }
 }
 
@@ -2592,6 +2689,37 @@ body.is-header-sidebar-open .header__sidebar {
 
     .interview__lead {
         font-size: 1.5rem;
+    }
+
+    .interview__txt {
+        font-size: var(--font-size16);
+    }
+
+    .interview__controls {
+        margin-top: calc(var(--spacing-unit)*4);
+        gap: calc(var(--spacing-unit)*3);
+    }
+
+    .interview__slider .swiper-pagination {
+        gap: calc(var(--spacing-unit)*1);
+    }
+
+    .interview__slider .swiper-button-prev, .interview__slider .swiper-button-next {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .interview__slider .swiper-button-prev svg, .interview__slider .swiper-button-next svg {
+        width: 1.5rem;
+    }
+
+    .interview__slider .swiper-pagination-bullet {
+        width: .8rem;
+        height: .8rem;
+    }
+
+    .interview__paint02 {
+        bottom: 15rem;
     }
 }
 
@@ -2944,6 +3072,7 @@ body.is-header-sidebar-open .header__sidebar {
 
 
 
+
 .gallery {
     position: relative;
 }
@@ -2955,13 +3084,25 @@ body.is-header-sidebar-open .header__sidebar {
     z-index: 2;
 }
 
-.gallery__slider {
+.gallery__slider:not(.swiper) {
     display: flex;
+}
+
+.gallery__slider.swiper {
+    width: 100%;
+}
+
+.gallery__slider.swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.gallery__slider:not(.swiper) .gallery__item {
+    width: 25%;
 }
 
 .gallery__item {
     display: flex;
-    width: 25%;
+    height: auto;
 }
 
 .gallery__item img {
@@ -2996,7 +3137,6 @@ body.is-header-sidebar-open .header__sidebar {
         top: 2rem;
     }
 }
-
 
 
 
