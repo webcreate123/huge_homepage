@@ -2394,7 +2394,7 @@ body.is-header-sidebar-open .header__sidebar {
 }
 
 @media (min-width: 769px) {
-    .campaign__inner:hover .campaign__bg-hover {
+    .js-3m-hover:hover .campaign__bg-hover {
         opacity: 1;
     }
 }
@@ -2449,30 +2449,38 @@ body.is-header-sidebar-open .header__sidebar {
     height: 11rem;
     background-color: var(--bg-white-color);
     border-radius: 50%;
-    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .campaign__arrow svg {
     position: absolute;
     width: 3rem;
     transform: rotate(0deg);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.campaign__arrow path {
+.js-arrow-rotate {
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.js-arrow-rotate svg {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.js-arrow-rotate path {
     transition: stroke 0.4s ease;
 }
 
 @media (min-width: 769px) {
-    .campaign__inner:hover .campaign__arrow {
+
+    .js-3m-hover:hover {
+        cursor:pointer;
+    }
+    .js-3m-hover:hover .js-arrow-rotate {
         background-color: #333333;
     }
 
-    .campaign__inner:hover .campaign__arrow svg {
+    .js-3m-hover:hover .js-arrow-rotate svg {
         transform: rotate(-30deg);
     }
 
-    .campaign__inner:hover .campaign__arrow path {
+    .js-3m-hover:hover .js-arrow-rotate path {
         stroke: #ffffff;
     }
 }
