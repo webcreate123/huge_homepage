@@ -487,7 +487,7 @@ function sliderSetting() {
 	}
 
 	// Interview (home only — other pages reuse .interview__slider without Swiper markup)
-	const interviewSliderEl = document.querySelector(".home__interivew .interview__slider");
+	const interviewSliderEl = document.querySelector(".interview__slider");
 	if (interviewSliderEl && typeof Swiper !== 'undefined') {
 		setupInterviewModal(interviewSliderEl);
 
@@ -496,19 +496,19 @@ function sliderSetting() {
 			resetInterviewVideoToPoster(videoEl);
 		});
 
-		new Swiper(".home__interivew .interview__slider", {
+		new Swiper(".interview__slider", {
 			loop: !1,
 			speed: 500,
 			slidesPerView: 1.5,
 			centeredSlides: true,
 			spaceBetween: 20,
 			pagination: {
-				el: ".home__interivew .interview__pagination",
+				el: ".interview__pagination",
 				clickable: true,
 			},
 			navigation: {
-				nextEl: ".home__interivew .swiper-button-next",
-				prevEl: ".home__interivew .swiper-button-prev",
+				nextEl: ".interview__slider .swiper-button-next",
+				prevEl: ".interview__slider .swiper-button-prev",
 			},
 			breakpoints: {
 				576: {
@@ -600,6 +600,39 @@ function sliderSetting() {
 
 		toggleLibrarySlider();
 		mobileMediaQuery.addEventListener("change", toggleLibrarySlider);
+	}
+
+	// Career pickup slider
+	const pickupSliderEl = document.querySelector(".pickup__content");
+	if (pickupSliderEl && typeof Swiper !== "undefined") {
+		new Swiper(".pickup__content", {
+			loop: false,
+			speed: 500,
+			slidesPerView: 1.3,
+			spaceBetween: 20,
+			pagination: {
+				el: ".pickup__pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".pickup__nav-btn--next",
+				prevEl: ".pickup__nav-btn--prev",
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 2.5,
+					spaceBetween: 24,
+				},
+				991: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+			},
+		});
 	}
 }
 
