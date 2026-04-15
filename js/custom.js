@@ -338,6 +338,38 @@ function tocSetting() {
 	});
 }
 
+
+
+
+function parttimeItemAccordion() {
+	const items = document.querySelectorAll(".parttime__inner .parttime__item");
+	if (!items.length) return;
+
+	items.forEach((item) => {
+		const tab = item.querySelector(".parttime__item-tab");
+		const content = item.querySelector(".parttime__item-content");
+		if (!tab || !content) return;
+
+		tab.addEventListener("click", function (e) {
+			e.preventDefault();
+			items.forEach((other) => {
+				if (other !== item) {
+					other.classList.remove("-open");
+				}
+			});
+			item.classList.toggle("-open");
+		});
+
+		const closeBtn = item.querySelector(".area__close-btn");
+		closeBtn?.addEventListener("click", function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			item.classList.remove("-open");
+		});
+	});
+}
+
+
 function sliderSetting() {
 	function setupInterviewModal(interviewRoot) {
 		const modalEl = document.querySelector(".js-interview-modal");
@@ -646,6 +678,7 @@ function init() {
 	textAnimation();
 	accordionSetting();
 	tocSetting();
+	parttimeItemAccordion();
 	sliderSetting();
 }
 
