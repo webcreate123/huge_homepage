@@ -1731,6 +1731,7 @@ img {
     font-weight: bold;
     color: var(--bg-font-color);
     line-height: 2.4;
+    transition: color 0.4s ease, background-image 0.45s ease, -webkit-text-fill-color 0.4s ease;
 }
 
 .news__arrow {
@@ -1742,14 +1743,18 @@ img {
     height: 5.5rem;
     background-color: var(--bg-font-color);
     border-radius: 50%;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .news__arrow svg {
     position: absolute;
     width: 2rem;
+    rotate: 0deg;
+    transition: rotate 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.news__item--important .news__article {
+.news__item--important .news__article,
+.news__item:hover .news__article {
     background-image: linear-gradient(90deg, #F3941A 0%, #E9535E 20%, #7876C8 80%, #2EB484 100%);
     color: transparent;
     -webkit-text-fill-color: transparent;
@@ -1757,11 +1762,13 @@ img {
     background-clip: text;
 }
 
-.news__item--important .news__arrow {
+.news__item--important .news__arrow,
+.news__item:hover .news__arrow {
     background-color: var(--bg-pink-color);
 }
 
-.news__item--important .news__arrow svg {
+.news__item--important .news__arrow svg,
+.news__item:hover .news__arrow svg {
     rotate: -45deg;
 }
 
