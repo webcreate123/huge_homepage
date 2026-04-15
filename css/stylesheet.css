@@ -4624,6 +4624,7 @@ body.is-header-sidebar-open .header__sidebar {
     line-height: 1.3;
     font-weight: bold;
     color: var(--bg-font-color);
+    transition: color 0.5s ease;
 }
 
 .job__category.-active {
@@ -4646,6 +4647,7 @@ body.is-header-sidebar-open .header__sidebar {
     height: 4.5rem;
     background-color: var(--bg-font-color);
     border-radius: 50%;
+    transition: background-color 0.5s ease;
 }
 
 .job__category-arrow svg {
@@ -7447,11 +7449,11 @@ body.is-header-sidebar-open .header__sidebar {
     color: var(--bg-font-color);
 }
 
-.job__category.-active {
+.job__category:hover {
     color: var(--bg-pink-color);
 }
 
-.job__category.-active .job__category-arrow {
+.job__category:hover .job__category-arrow {
     background-color: var(--bg-pink-color);
 }
 
