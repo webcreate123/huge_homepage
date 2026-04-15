@@ -1521,6 +1521,7 @@ body.is-header-sidebar-open .header__sidebar {
 
 .container-sm {
     padding: 0 var(--margin-sm);
+    width: 100%;
 }
 
 .page__fv {
@@ -2088,6 +2089,7 @@ body.is-header-sidebar-open .header__sidebar {
 
 .home__message {
     position: relative;
+    z-index: 0;
 }
 
 .message__paint {
@@ -2189,6 +2191,7 @@ body.is-header-sidebar-open .header__sidebar {
 
 @media (max-width: 768px) {
     .message__paint {
+        z-index: -1;
         width: 12rem;
         top: -1rem;
     }
@@ -2278,6 +2281,7 @@ body.is-header-sidebar-open .header__sidebar {
 
 .home__campaign {
     position: relative;
+    z-index: 0;
 }
 
 .campaign__paint {
@@ -2286,6 +2290,7 @@ body.is-header-sidebar-open .header__sidebar {
     left: 0;
     width: 15rem;
     aspect-ratio: 162/441;
+    z-index: -1;
 }
 
 .campaign__paint img {
@@ -2295,6 +2300,8 @@ body.is-header-sidebar-open .header__sidebar {
 .campaign__inner {
     position: relative;
     z-index: 2;
+    display: block;
+    width: 100%;
 }
 
 .campaign__bg {
@@ -2884,6 +2891,19 @@ body.is-header-sidebar-open .header__sidebar {
     gap: calc(var(--spacing-unit)*9);
 }
 
+.library__mobile-slider .swiper-wrapper {
+    display: flex;
+    gap: calc(var(--spacing-unit)*2);
+}
+
+.library__mobile-slider .swiper-slide {
+    flex: 0 0 auto;
+}
+
+.library__mobile-controls {
+    display: none;
+}
+
 .library__item {
     flex: 1;
     display: flex;
@@ -3001,6 +3021,118 @@ body.is-header-sidebar-open .header__sidebar {
 
     .library__note {
         width: 3rem;
+    }
+
+    .library__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--spacing-unit)*4);
+    }
+
+    .library__mobile-slider {
+        overflow: visible;
+        width: 100%;
+    }
+
+    .library__mobile-slider .swiper-wrapper {
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .library__mobile-slider .swiper-slide {
+        flex: 0 0 auto;
+        width: 100% !important;
+        height: auto;
+    }
+
+    .library__mobile-slider .library__item {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--spacing-unit)*2.8);
+        color: var(--bg-font-color);
+    }
+
+    .library__mobile-slider .library__img {
+        width: 100%;
+        aspect-ratio: 345/235;
+    }
+
+    .library__mobile-slider .library__main {
+        margin-top: 0;
+        gap: calc(var(--spacing-unit)*2);
+    }
+
+    .library__mobile-slider .library__title {
+        font-size: 1.8rem;
+        line-height: 1.55;
+    }
+
+    .library__mobile-slider .library__txt {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+
+    .library__mobile-slider .library__meta {
+        margin-top: calc(var(--spacing-unit)*1.2);
+    }
+
+    .library__mobile-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: calc(var(--spacing-unit)*1.2);
+    }
+
+    .library__mobile-nav {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--spacing-unit)*1.5);
+    }
+
+    .library__mobile-prev,
+    .library__mobile-next {
+        position: static;
+        width: 5.5rem;
+        height: 5.5rem;
+        margin: 0;
+        border-radius: 50%;
+        background-color: var(--bg-font-color);
+        color: var(--bg-white-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .library__mobile-prev::after,
+    .library__mobile-next::after {
+        display: none;
+    }
+
+    .library__mobile-prev svg,
+    .library__mobile-next svg {
+        width: 1.8rem;
+        height: auto;
+    }
+
+    .library__view-all {
+        display: inline-flex;
+        align-items: center;
+        gap: calc(var(--spacing-unit)*1.2);
+        font-size: 1.8rem;
+        font-family: var(--fontLexendDeca);
+        font-weight: 500;
+        color: var(--bg-font-color);
+        letter-spacing: 0.02em;
+        line-height: 1.3;
+        padding-bottom: calc(var(--spacing-unit)*.8);
+        border-bottom: 1px solid var(--bg-font-color);
+    }
+
+    .library__view-all svg {
+        width: 1.5rem;
+        height: auto;
     }
 }
 
