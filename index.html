@@ -1,78 +1,77 @@
-<?php
-    $AUTH_USER = 'huge';
-	$AUTH_PASS = 'huge';
-	header('Cache-Control: no-cache, must-revalidate, max-age=0');
-	$has_supplied_credentials = !(empty($_SERVER['PHP_AUTH_USER']) && empty($_SERVER['PHP_AUTH_PW']));
-	$is_not_authenticated = (
-		!$has_supplied_credentials ||
-		$_SERVER['PHP_AUTH_USER'] != $AUTH_USER ||
-		$_SERVER['PHP_AUTH_PW']   != $AUTH_PASS
-	);
-	if ($is_not_authenticated) {
-		header('HTTP/1.1 401 Authorization Required');
-		header('WWW-Authenticate: Basic realm="Access denied"');
-		exit;
-	}
-?>
 <!DOCTYPE html>
 <html lang="jp">
 
-<head>
+
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>採用情報 | 株式会社HUGE（ヒュージ）</title>
+
+    <meta name="description" content="HUGEでは採用希望者に、「あなたは、レストランで何をしたいですか？」という質問をします。苦手を克服するのではなく、したいこと、得意なことを見つけ、伸ばしたいと考えています。" />
+	<link rel="canonical" href="https://staging.recruit.huge.co.jp/" />
+	<meta property="og:locale" content="ja_JP" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="採用情報 | 株式会社HUGE（ヒュージ）" />
+	<meta property="og:description" content="HUGEでは採用希望者に、「あなたは、レストランで何をしたいですか？」という質問をします。苦手を克服するのではなく、したいこと、得意なことを見つけ、伸ばしたいと考えています。" />
+	<meta property="og:url" content="https://recruit.huge.co.jp/" />
+	<meta property="og:site_name" content="採用情報 | 株式会社HUGE（ヒュージ）" />
+	<meta property="og:image" content="https://recruit.huge.co.jp/wp-content/uploads/2021/08/ogp-huge-recruit.webp" />
+	<meta property="og:image:width" content="2400" />
+	<meta property="og:image:height" content="1260" />
+	<meta name="twitter:card" content="summary_large_image" />
+
     <link href="css/fonts.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/responsive.css" rel="stylesheet" type="text/css">
 </head>
 
 <body id="page__top">
     <div class="wrapper">
         <!-- HEADER_START -->
-        <header class="header">
+        <header class="header" style="opacity: 0; visibility: hidden;">
             <div class="header__set">
                 <div class="header__left">
-                    <a class="header__logo" href="/">
+                    <a class="header__logo" href="https://www.huge.co.jp/">
                         <img src="img/header_logo.svg" alt="HUGE RECRUITING">
                     </a>
                 </div>
                 <div class="header__menu">
-                    <a class="header__menu-link" href="#">
+                    <a class="header__menu-link" href="new-graduates.html">
                         <div class="header__menu-shape">
                             <div class="header__menu-cap">
                                 <span class="headmenu__cap-en">NEW GRAD</span>
                                 <span class="headmenu__cap-jp">新卒採用</span>
                             </div>
                             <div class="header__menu-arrow">
-                                <svg viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.23334 0.707094L12.5 4.97378L8.23334 9.24046M11.9667 4.97378L0.499979 4.97378" stroke="white" stroke-linecap="square"/>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
                                 </svg>
                             </div>
                         </div>
                     </a>
-                    <a class="header__menu-link" href="#">
+                    <a class="header__menu-link" href="career.html">
                         <div class="header__menu-shape">
                             <div class="header__menu-cap">
                                 <span class="headmenu__cap-en">CAREER</span>
                                 <span class="headmenu__cap-jp">中途採用</span>
                             </div>
                             <div class="header__menu-arrow">
-                                <svg viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.23334 0.707094L12.5 4.97378L8.23334 9.24046M11.9667 4.97378L0.499979 4.97378" stroke="white" stroke-linecap="square"/>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
                                 </svg>
                             </div>
                         </div>
                     </a>
-                    <a class="header__menu-link" href="#">
+                    <a class="header__menu-link" href="part-time.html">
                         <div class="header__menu-shape">
                             <div class="header__menu-cap">
                                 <span class="headmenu__cap-en">PART-TIME</span>
                                 <span class="headmenu__cap-jp">アルバイト採用</span>
                             </div>
                             <div class="header__menu-arrow">
-                                <svg viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.23334 0.707094L12.5 4.97378L8.23334 9.24046M11.9667 4.97378L0.499979 4.97378" stroke="white" stroke-linecap="square"/>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
                                 </svg>
                             </div>
                         </div>
@@ -91,16 +90,23 @@
             <div class="header__sidebar-overlay" aria-hidden="true"></div>
             <aside id="header-sidebar" class="header__sidebar" aria-label="サイトメニュー" aria-hidden="true">
                 <nav class="header__sidebar-nav">
-                    <a class="header__sidebar-link" href="#">
+                    <a class="header__sidebar-link header__sidebar-link--single" href="index.html">
+                        <span class="header__sidebar-en">TOP</span>
+                        <span class="header__sidebar-jp">採用トップ</span>
+                    </a>
+                    <a class="header__sidebar-link header__sidebar-link--single" href="about-huge-3min.html">
+                        <span class="header__sidebar-en">HUGE in 3 minutes</span>
+                        <span class="header__sidebar-jp">3分でわかるHUGE</span>
+                    </a>
+                    <a class="header__sidebar-link" href="new-graduates.html">
                         <span class="header__sidebar-en">NEW GRAD</span>
                         <span class="header__sidebar-jp">新卒採用</span>
                     </a>
-                    <a class="header__sidebar-link header__sidebar-link--single" href="#">3分でわかるHUGE</a>
-                    <a class="header__sidebar-link" href="#">
+                    <a class="header__sidebar-link" href="career.html">
                         <span class="header__sidebar-en">CAREER</span>
                         <span class="header__sidebar-jp">中途採用</span>
                     </a>
-                    <a class="header__sidebar-link" href="#">
+                    <a class="header__sidebar-link" href="part-time.html">
                         <span class="header__sidebar-en">PART-TIME</span>
                         <span class="header__sidebar-jp">アルバイト採用</span>
                     </a>
@@ -108,16 +114,51 @@
             </aside>
         </header>
         <!-- HEADER_END -->
+        <nav class="sp-bottom-nav js-sp-bottom-nav" aria-label="採用ページショートカット">
+            <a class="header__sidebar-link sp-bottom-nav__cell" href="new-graduates.html">
+                <span class="sp-bottom-nav__cap">
+                    <span class="header__sidebar-en">NEW GRAD</span>
+                    <span class="header__sidebar-jp">新卒採用</span>
+                </span>
+                <span class="sp-bottom-nav__arrow" aria-hidden="true">
+                    <svg viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.23334 0.707094L12.5 4.97378L8.23334 9.24046M11.9667 4.97378L0.499979 4.97378" stroke="white" stroke-linecap="square"/>
+                    </svg>
+                </span>
+            </a>
+            <a class="header__sidebar-link sp-bottom-nav__cell" href="career.html">
+                <span class="sp-bottom-nav__cap">
+                    <span class="header__sidebar-en">CAREER</span>
+                    <span class="header__sidebar-jp">中途採用</span>
+                </span>
+                <span class="sp-bottom-nav__arrow" aria-hidden="true">
+                    <svg viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.23334 0.707094L12.5 4.97378L8.23334 9.24046M11.9667 4.97378L0.499979 4.97378" stroke="white" stroke-linecap="square"/>
+                    </svg>
+                </span>
+            </a>
+            <a class="header__sidebar-link sp-bottom-nav__cell" href="part-time.html">
+                <span class="sp-bottom-nav__cap">
+                    <span class="header__sidebar-en">PART-TIME</span>
+                    <span class="header__sidebar-jp">アルバイト採用</span>
+                </span>
+                <span class="sp-bottom-nav__arrow" aria-hidden="true">
+                    <svg viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.23334 0.707094L12.5 4.97378L8.23334 9.24046M11.9667 4.97378L0.499979 4.97378" stroke="white" stroke-linecap="square"/>
+                    </svg>
+                </span>
+            </a>
+        </nav>
         <!-- CONTAIN_START -->
         <main class="content">
             <section class="banner">
                 <div class="banner__inner">
                     <div class="banner__bg">
-                        <video src="video/mv_video.mp4" autoplay muted loop playsinline poster="img/banner_bg.jpg"></video>
+                        <video src="video/mv_video.mp4" autoplay muted loop playsinline poster="img/banner_bg.webp"></video>
                     </div>
                     <h1 class="banner__title">Make it WOW!</h1>
                     <div class="banner__video">
-                        <img src="img/banner_img.png">
+                        <img src="img/banner_img.webp">
                     </div>
                     <div class="banner__bottom">HUGE</div>
                 </div>
@@ -178,7 +219,7 @@
                             <div class="news__heading">
                                 <h2 class="news__title">
                                     <span class="news__title-paint">
-                                        <img src="img/news_ttl_paint.png">
+                                        <img src="img/news_ttl_paint.webp">
                                     </span>
                                     <span class="news__title-txt">
                                         <span>NE</span><span>WS</span>
@@ -187,42 +228,37 @@
                             </div>
                             <div class="news__content">
                                 <ul class="news__list">
-                                    <li class="news__item">
-                                        <a class="news__link" href="">
+                                    <li class="news__item news__item--nolink">
+                                        <div class="news__link">
                                             <div class="news__main">
-                                                <time class="news__date">2026.04.14</time>
+                                                <time class="news__date">2026.04.30</time>
                                                 <h3 class="news__article">採用ホームページをリニューアルしました。</h3>
                                             </div>
-                                            <div class="news__arrow">
-                                                <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M11.4365 0.707163L17.4705 6.74114L11.4365 12.7751M16.7163 6.74114L0.499948 6.74114" stroke="white" stroke-linecap="square"/>
-                                                </svg>                                                
-                                            </div>
-                                        </a>
+                                        </div>
                                     </li>
                                     <li class="news__item">
-                                        <a class="news__link" href="">
+                                        <a class="news__link" href="https://recruit.huge.co.jp/new-graduates/">
                                             <div class="news__main">
-                                                <time class="news__date">2026.04.14</time>
+                                                <time class="news__date">2026.04.30</time>
                                                 <h3 class="news__article">★2027年度 新卒採用★エントリー受付中！</h3>
                                             </div>
                                             <div class="news__arrow">
                                                 <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M11.4365 0.707163L17.4705 6.74114L11.4365 12.7751M16.7163 6.74114L0.499948 6.74114" stroke="white" stroke-linecap="square"/>
-                                                </svg>                                                
+                                                </svg>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="news__item">
-                                        <a class="news__link" href="">
+                                        <a class="news__link" href="https://recruit.huge.co.jp/new-graduates/">
                                             <div class="news__main">
-                                                <time class="news__date">2026.04.14</time>
+                                                <time class="news__date">2026.04.30</time>
                                                 <h3 class="news__article">会社説明会＜対面&オンライン実施＞エントリー受付中！</h3>
                                             </div>
                                             <div class="news__arrow">
                                                 <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M11.4365 0.707163L17.4705 6.74114L11.4365 12.7751M16.7163 6.74114L0.499948 6.74114" stroke="white" stroke-linecap="square"/>
-                                                </svg>                                                
+                                                </svg>
                                             </div>
                                         </a>
                                     </li>
@@ -242,7 +278,7 @@
                             <div class="section__heading">
                                 <h2 class="section__title">
                                     <span class="section__title-paint">
-                                        <img src="img/section_ttl_paint.png">
+                                        <img src="img/section_ttl_paint.webp">
                                     </span>
                                     <span class="section__title-txt">TOP MESSAGE</span>
                                 </h2>
@@ -257,31 +293,36 @@
                                             お客様の期待値を超え続ける。<br />
                                             その真っ直ぐなチャレンジが<br class="is__SP" />
                                             「ありがとう」の数を生み出す。<br />
-                                            この幸福なコミュニケーションは、<br class="is__SP" />どんなに時代が変わっても<br />
-                                            誰もがリアルで求め続けるあたたかなもの。<br />
-                                            「ありがとう」と言っていただける商売こそ、<br />
-                                            真っ直ぐ楽しい商売ではないだろうか？
+                                            この幸福なコミュニケーションは、<br class="is__SP" />どんなに時代が変わっても、<br />
+                                            誰もがリアルで求め続ける、あたたかなもの。<br /><br />
+                                            レストランはデジタルの世界の中で、<br />
+                                            唯一残るアナログ産業だと、確信しています。
                                         </p>
                                     </div>
                                     <div class="message__sign">
-                                        <img src="img/message_sign.png">
+                                        <img src="img/message_sign.webp">
                                     </div>
                                 </div>
                                 <div class="message__right">
                                     <span class="message__video-paint message__video-paint--01">
-                                        <img src="img/message_video_paint01.png">
+                                        <img src="img/message_video_paint01.webp">
                                     </span>
                                     <span class="message__video-paint message__video-paint--02">
-                                        <img src="img/message_video_paint02.png">
+                                        <img src="img/message_video_paint02.webp">
                                     </span>
                                     <div class="message__video">
-                                        <video src="video/mv_video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                                        <div class="message__video-inner">
+                                            <video src="video/huge_ceo_movie.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                                            <button type="button" class="message__video-play js-message-video-modal-open" aria-label="動画を拡大して再生">
+                                                <img src="img/ico_play.svg" width="80" height="80" alt="" decoding="async">
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="message__paint">
-                            <img src="img/message_paint.png">
+                            <img src="img/message_paint.webp">
                         </div>
                     </div>
                     <div class="hx12"></div>
@@ -289,13 +330,13 @@
                 <section class="home__campaign">
                     <div class="hx14"></div>
                     <div class="container-sm">
-                        <a class="campaign__inner js-3m-hover" href="#">
+                        <a class="campaign__inner" href="about-huge-3min.html">
                             <div class="campaign__bg">
                                 <picture class="campaign__bg-default">
-                                    <source srcset="img/campaign_bg_sp.png" media="(max-width: 768px)">
-                                    <img src="img/campaign_bg.png">
+                                    <source srcset="img/campaign_bg_sp.webp" media="(max-width: 768px)">
+                                    <img src="img/campaign_bg.webp">
                                 </picture>
-                                <img class="campaign__bg-hover" src="img/campaign_bg_hover.jpg" alt="">
+                                <img class="campaign__bg-hover" src="img/campaign_bg_hover.webp" alt="">
                             </div>
                             <div class="campaign__content">
                                 <div class="campaign__mark">
@@ -309,16 +350,16 @@
                                         活躍していただくうえで、皆さんに知ってほしいことを<br class="is__PC" />
                                         まとめています。
                                     </div>
-                                    <div class="campaign__arrow js-arrow-rotate">
+                                    <div class="campaign__arrow">
                                         <svg viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.1549 1.06074L26.2058 10.1117L17.1549 19.1627M25.0745 10.1117L0.749983 10.1117" stroke="#333333" stroke-width="1.5" stroke-linecap="square"/>
-                                        </svg>                                            
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <div class="campaign__paint">
-                            <img src="img/campaign_paint.png">
+                            <img src="img/campaign_paint.webp">
                         </div>
                     </div>
                     <div class="hx14"></div>
@@ -329,7 +370,7 @@
                         <div class="interview__heading">
                             <h2 class="section__title">
                                 <span class="section__title-paint">
-                                    <img src="img/section_ttl_paint.png">
+                                    <img src="img/section_ttl_point02.webp">
                                 </span>
                                 <span class="section__title-txt">INTERVIEW</span>
                             </h2>
@@ -340,7 +381,7 @@
                                 <div class="interview__lead">
                                     <p>
                                         HUGEを支え、夢中になり、<br />
-                                        動かしているスタッフの声を、動画でご覧ください。  
+                                        動かしているスタッフの声を、動画でご覧ください。
                                     </p>
                                 </div>
                             </div>
@@ -350,7 +391,51 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
                                         <div class="interview__video">
-                                            <video src="video/interview_video01.mp4" muted loop playsinline poster="img/interview_img1.png"></video>
+                                            <video src="video/video_interview01.mp4" muted loop playsinline poster="img/interview_img1.png"></video>
+                                            <span class="interview__btn">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="interview__main">
+                                            <div class="interview__category-list">
+                                                <span class="interview__category interview__category--newgrad">新卒入社</span>
+                                                <span class="interview__category">大卒</span>
+                                            </div>
+                                            <div class="interview__txt">
+                                                <p>
+                                                    お仕事のターニングポイントはソムリエ資格を取得したこと？
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="interview__name">ホール</div>
+                                    </div>
+                                    <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
+                                        <div class="interview__video">
+                                            <video src="video/video_interview02.mp4" muted loop playsinline poster="img/interview_img2.png"></video>
+                                            <span class="interview__btn">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="interview__main">
+                                            <div class="interview__category-list">
+                                                <span class="interview__category interview__category--career">中途入社</span>
+                                                <span class="interview__category">前職:レストラン</span>
+                                            </div>
+                                            <div class="interview__txt">
+                                                <p>
+                                                    最短で料理長に抜擢されたシェフは、中途入社前からHUGEをベンチマーク？
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="interview__name">シェフ</div>
+                                    </div>
+                                    <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
+                                        <div class="interview__video">
+                                            <video src="video/video_interview03.mp4" muted loop playsinline poster="img/interview_img3.png"></video>
                                             <span class="interview__btn">
                                                 <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
@@ -360,19 +445,41 @@
                                         <div class="interview__main">
                                             <div class="interview__category-list">
                                                 <span class="interview__category interview__category--entry">スタッフ入社→社員</span>
-                                                <span class="interview__category">大卒</span>
+                                                <span class="interview__category">前職:レストラン</span>
                                             </div>
                                             <div class="interview__txt">
                                                 <p>
-                                                    スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！
+                                                    What does an International Team Leader at HUGE do？
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="interview__name">ホール</div>
+                                        <div class="interview__name">International Leader</div>
                                     </div>
                                     <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
                                         <div class="interview__video">
-                                            <video src="video/interview_video02.mp4" muted loop playsinline poster="img/interview_img2.png"></video>
+                                            <video src="video/video_interview04.mp4" muted loop playsinline poster="img/interview_img4.png"></video>
+                                            <span class="interview__btn">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="interview__main">
+                                            <div class="interview__category-list">
+                                                <span class="interview__category interview__category--career">中途入社</span>
+                                                <span class="interview__category">前職：事務</span>
+                                            </div>
+                                            <div class="interview__txt">
+                                                <p>
+                                                    一度退職をしたけど、カムバック入社でHUGEに戻ってきた理由は？
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="interview__name">キッチン</div>
+                                    </div>
+                                    <!-- <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
+                                        <div class="interview__video">
+                                            <video src="video/interview_video05.mp4" muted loop playsinline poster="img/interview_img5.webp"></video>
                                             <span class="interview__btn">
                                                 <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
@@ -390,86 +497,20 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="interview__name">シェフ</div>
-                                    </div>
-                                    <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
-                                        <div class="interview__video">
-                                            <video src="video/interview_video03.mp4" muted loop playsinline poster="img/interview_img3.png"></video>
-                                            <span class="interview__btn">
-                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="interview__main">
-                                            <div class="interview__category-list">
-                                                <span class="interview__category interview__category--entry">スタッフ入社→社員</span>
-                                                <span class="interview__category">大卒</span>
-                                            </div>
-                                            <div class="interview__txt">
-                                                <p>
-                                                    スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="interview__name">International Leader</div>
-                                    </div>
-                                    <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
-                                        <div class="interview__video">
-                                            <video src="video/interview_video04.mp4" muted loop playsinline poster="img/interview_img4.png"></video>
-                                            <span class="interview__btn">
-                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="interview__main">
-                                            <div class="interview__category-list">
-                                                <span class="interview__category interview__category--entry">スタッフ入社→社員</span>
-                                                <span class="interview__category">大卒</span>
-                                            </div>
-                                            <div class="interview__txt">
-                                                <p>
-                                                    スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="interview__name">キッチン</div>
-                                    </div>
-                                    <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
-                                        <div class="interview__video">
-                                            <video src="video/interview_video05.mp4" muted loop playsinline poster="img/interview_img5.png"></video>
-                                            <span class="interview__btn">
-                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="interview__main">
-                                            <div class="interview__category-list">
-                                                <span class="interview__category interview__category--entry">スタッフ入社→社員</span>
-                                                <span class="interview__category">大卒</span>
-                                            </div>
-                                            <div class="interview__txt">
-                                                <p>
-                                                    スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="interview__name">キッチン</div>
-                                    </div>
+                                        <div class="interview__name">ホール</div>
+                                    </div> -->
                                 </div>
                                 <div class="interview__controls">
                                     <div class="swiper-button-prev interview__nav-btn interview__nav-btn--prev" aria-label="前のスライド">
                                         <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.74108 0.707163L0.707101 6.74114L6.74108 12.7751M1.46135 6.74114L17.6777 6.74114" stroke="white" stroke-linecap="square"/>
-                                        </svg>                                            
+                                        </svg>
                                     </div>
                                     <div class="swiper-pagination interview__pagination"></div>
                                     <div class="swiper-button-next interview__nav-btn interview__nav-btn--next" aria-label="次のスライド">
                                         <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M11.4365 0.707163L17.4705 6.74114L11.4365 12.7751M16.7163 6.74114L0.499948 6.74114" stroke="white" stroke-linecap="square"/>
-                                        </svg>                                            
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
@@ -479,7 +520,7 @@
                         <img src="img/interview_paint01.svg">
                     </div>
                     <div class="interview__paint interview__paint02">
-                        <img src="img/interview_paint02.png">
+                        <img src="img/interview_paint02.webp">
                     </div>
                 </section>
                 <section class="home__library">
@@ -488,14 +529,14 @@
                         <div class="section__heading library__heading">
                             <h2 class="section__title">
                                 <span class="section__title-paint">
-                                    <img src="img/section_ttl_paint.png">
+                                    <img src="img/section_ttl_point03.webp">
                                 </span>
                                 <span class="section__title-txt">HUGE Library</span>
                             </h2>
                             <div class="section__lead">
                                 <p>
                                     「人」「食」「店」の視点から、<br />
-                                    今日もHUGEで生まれている「HUGEらしい」エピソードを<br />
+                                    今日もHUGEで生まれている<br class="sp-only">「HUGEらしい」エピソードを<br />
                                     お届けするコンテンツです。
                                 </p>
                             </div>
@@ -505,21 +546,21 @@
                                 <div class="library__pickup">
                                     <a class="library__item" href="#">
                                         <div class="library__img">
-                                            <img src="img/library_img.png">
+                                            <img src="img/library_img.webp">
                                         </div>
                                         <div class="library__main">
                                             <div class="library__title">
-                                                HUGE 20周年記念ムービー「ONE HUGE STORY」
+                                                「”答えがない”のが面白い」HUGEメキシカンレストランの統括料理長、渡辺健一が語るメキシコ料理の魅力と可能性
                                             </div>
                                             <div class="library__txt">
                                                 <p>
-                                                    “100年品質”のレストランを目指して歩んできた、HUGEの20年。その軌跡を描いたムービーをご覧ください。
+                                                    現在HUGEで8店舗展開しているモダンメキシカン。本場メキシコの料理をそのまま再現するのではなく、日本人の口に合った形へと進化させ、ラテンアメリカの美味しさや楽しさをカジュアルに堪能できるモダンスタイルを確立してきました。そんなHUGEのメキシカンレストランの統括料理長として活躍する渡辺健一に、メキシコ料理の魅力やHUGEの可能性についてインタビューしました。
                                                 </p>
                                             </div>
                                             <div class="library__meta">
                                                 <div class="library__date">2025.03.27</div>
                                                 <div class="library__note">
-                                                    <img src="img/note_mark.png">
+                                                    <img src="img/note_mark.webp">
                                                 </div>
                                             </div>
                                         </div>
@@ -528,7 +569,7 @@
                                 <div class="library__list -type--list">
                                     <a class="library__item" href="#">
                                         <div class="library__img">
-                                            <img src="img/library_img1.png">
+                                            <img src="img/library_img1.webp">
                                         </div>
                                         <div class="library__main">
                                             <div class="library__title">
@@ -542,61 +583,61 @@
                                             <div class="library__meta">
                                                 <div class="library__date">2025.03.27</div>
                                                 <div class="library__note">
-                                                    <img src="img/note_mark.png">
+                                                    <img src="img/note_mark.webp">
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
                                     <a class="library__item" href="#">
                                         <div class="library__img">
-                                            <img src="img/library_img2.png">
+                                            <img src="img/library_img2.webp">
                                         </div>
                                         <div class="library__main">
                                             <div class="library__title">
-                                                HUGE 20周年記念ムービー「ONE HUGE STORY」
+                                                「同じパーティーは一つとして無いから面白い」ウエディング・パーティープランナー清地美佐子が語るHUGEの魅力と仕事観
                                             </div>
                                             <div class="library__txt">
                                                 <p>
-                                                    “100年品質”のレストランを目指して歩んできた、HUGEの20年。その軌跡を描いたムービーをご覧ください。
+                                                    創業時よりHUGEを支え、率いてきたウエディング・パーティープランナーの清地美佐子。銀座DAZZLEのレセプショニストとして入社後、パーティーデスクの立ち上げからマネージャーを務めながら、ウエディングをはじめ企業パーティー等のプランニングも担う敏腕プランナーです。今回は、そんな清地美佐子にレストラン会社であるHUGEだからこそ実現できるパーティーの魅力や、彼女自身の仕事観・仕事術についてインタビューしました。
                                                 </p>
                                             </div>
                                             <div class="library__meta">
                                                 <div class="library__date">2025.03.27</div>
                                                 <div class="library__note">
-                                                    <img src="img/note_mark.png">
+                                                    <img src="img/note_mark.webp">
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
                                     <a class="library__item" href="#">
                                         <div class="library__img">
-                                            <img src="img/library_img3.png">
+                                            <img src="img/library_img3.webp">
                                         </div>
                                         <div class="library__main">
                                             <div class="library__title">
-                                                HUGE 20周年記念ムービー「ONE HUGE STORY」
+                                                レストラン屋”がつくるジン『NUMBER EIGHT GIN』の魅力。
                                             </div>
                                             <div class="library__txt">
                                                 <p>
-                                                    “100年品質”のレストランを目指して歩んできた、HUGEの20年。その軌跡を描いたムービーをご覧ください。
+                                                    バーテンダーが本気でつくった、フレッシュボタニカルのクラフト・ジンの秘密に迫る——。自社製造のハウスビールに、自社焙煎のコーヒー。レストランとして、自らの手でクラフトしたものをお客様に提供する。そんなHUGEの想いが込められたプロダクトのファンは多い。HUGEのものづくりの拠点、YOKOHAMA HAMMERHEADに蒸留所を持つNUMBER EIGHT GIN (ナンバーエイトジン)も、そのひとつ。
                                                 </p>
                                             </div>
                                             <div class="library__meta">
                                                 <div class="library__date">2025.03.27</div>
                                                 <div class="library__note">
-                                                    <img src="img/note_mark.png">
+                                                    <img src="img/note_mark.webp">
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
-                                </div>  
+                                </div>
                             </div>
                             <div class="library__bottom">
                                 <div class="library__list -type--card library__mobile-slider">
                                     <div class="swiper-wrapper">
                                         <a class="library__item" href="#">
                                             <div class="library__img">
-                                                <img src="img/library_img4.png">
+                                                <img src="img/library_img4.webp">
                                             </div>
                                             <div class="library__main">
                                                 <div class="library__title">
@@ -604,55 +645,55 @@
                                                 </div>
                                                 <div class="library__txt">
                                                     <p>
-                                                        “100年品質”のレストランを目指して歩んできた、HUGEの20年。その軌跡を描いたムービーをご覧ください。
+                                                        ホスピタリティは「人」から生まれる。ホスピタリティを大切にするHUGEにとって、自社のサービスやクオリティを支える「人材」は、資源であり、会社の“土台”とも言えるもの。そんな“土台づくり”を担ってきたのが、HUGEのHuman Resources（HR）ジェネラルマネージャー・原田聡子。　HUGEにHRチームを立ち上げ、ジェネラルマネージャーとして人的資源の開発・育成に従事。新卒・中途採用、自社研修の企画・開発のほか、近年では外国籍人材の採用を主導する、まさに“HUGEを支える人材のスペシャリスト”です。
                                                     </p>
                                                 </div>
                                                 <div class="library__meta">
                                                     <div class="library__date">2025.03.27</div>
                                                     <div class="library__note">
-                                                        <img src="img/note_mark.png">
+                                                        <img src="img/note_mark.webp">
                                                     </div>
                                                 </div>
                                             </div>
                                         </a>
                                         <a class="library__item" href="#">
                                             <div class="library__img">
-                                                <img src="img/library_img5.png">
+                                                <img src="img/library_img5.webp">
                                             </div>
                                             <div class="library__main">
                                                 <div class="library__title">
-                                                    HUGE 20周年記念ムービー「ONE HUGE STORY」
+                                                    なぜHUGEのレストランでは、ワインが飲みたくなるのか。ワインリストに込めたこだわり。
                                                 </div>
                                                 <div class="library__txt">
                                                     <p>
-                                                        “100年品質”のレストランを目指して歩んできた、HUGEの20年。その軌跡を描いたムービーをご覧ください。
+                                                        世界を旅する気分になれる、ワインリストとは？ワインリストを開くと、そのレストランの“本気度”が見えてくる。ラインナップは偏っていないか。表記は誠実か。そのお店ならではの世界があるか。ワインをどう扱うかは、そのまま店のワインへの姿勢を表す。私たちはそう考えています。RIGOLETTO(リゴレット)でワインリストをお願いすると、スタッフが目の前でワインリストのページを開いて手渡します。最初に広がるのは、均一価格で楽しめる「ハウスセレクション」。さらに中のページへ進むと、世界中からセレクトをした多彩なブティックワインが並びます。
                                                     </p>
                                                 </div>
                                                 <div class="library__meta">
                                                     <div class="library__date">2025.03.27</div>
                                                     <div class="library__note">
-                                                        <img src="img/note_mark.png">
+                                                        <img src="img/note_mark.webp">
                                                     </div>
                                                 </div>
                                             </div>
                                         </a>
                                         <a class="library__item" href="#">
                                             <div class="library__img">
-                                                <img src="img/library_img6.png">
+                                                <img src="img/library_img6.webp">
                                             </div>
                                             <div class="library__main">
                                                 <div class="library__title">
-                                                    HUGE 20周年記念ムービー「ONE HUGE STORY」
+                                                    HUGEが自社製造をするハウスクラフトビール。料理との相性を楽しむ『IWAI ラガー』
                                                 </div>
                                                 <div class="library__txt">
                                                     <p>
-                                                        “100年品質”のレストランを目指して歩んできた、HUGEの20年。その軌跡を描いたムービーをご覧ください。
+                                                        料理の個性を引き立てる、HUGEのハウスビール「IWAIラガー」レストランのために開発されたビールに込められた想いとは。
                                                     </p>
                                                 </div>
                                                 <div class="library__meta">
                                                     <div class="library__date">2025.03.27</div>
                                                     <div class="library__note">
-                                                        <img src="img/note_mark.png">
+                                                        <img src="img/note_mark.webp">
                                                     </div>
                                                 </div>
                                             </div>
@@ -662,12 +703,12 @@
                                 <div class="library__mobile-controls">
                                     <div class="library__mobile-nav">
                                         <div class="swiper-button-prev library__mobile-prev" aria-label="前の記事">
-                                            <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M6.74108 0.707163L0.707101 6.74114L6.74108 12.7751M1.46135 6.74114L17.6777 6.74114" stroke="white" stroke-linecap="square"/>
+                                            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.4365 0.707163L17.4705 6.74114L11.4365 12.7751M16.7163 6.74114L0.499948 6.74114" stroke="white" stroke-linecap="square"/>
                                             </svg>
                                         </div>
                                         <div class="swiper-button-next library__mobile-next" aria-label="次の記事">
-                                            <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11.4365 0.707163L17.4705 6.74114L11.4365 12.7751M16.7163 6.74114L0.499948 6.74114" stroke="white" stroke-linecap="square"/>
                                             </svg>
                                         </div>
@@ -683,7 +724,7 @@
                         </div>
                     </div>
                     <div class="library__paint">
-                        <img src="img/library_paint.png">
+                        <img src="img/library_paint.webp">
                     </div>
                     <div class="hx16"></div>
                 </section>
@@ -693,18 +734,18 @@
                         <div class="section__heading entry__heading">
                             <h2 class="section__title">
                                 <span class="section__title-paint">
-                                    <img src="img/section_ttl_paint.png">
+                                    <img src="img/section_ttl_point04.webp">
                                 </span>
                                 <span class="section__title-txt">ENTRY</span>
                             </h2>
                         </div>
                         <div class="entry__content">
-                            <a class="entry__item" href="#">
+                            <a class="entry__item" href="new-graduates.html">
                                 <div class="entry__img">
-                                    <img src="img/entry_img01.jpg">
+                                    <img src="img/entry_img01.webp">
                                 </div>
                                 <div class="entry__blur">
-                                    <img src="img/blur_bg.png">
+                                    <img src="img/blur_bg.webp">
                                 </div>
                                 <h3 class="entry__title">
                                     <span class="entry__title-en">NEW GRADUATES</span>
@@ -713,15 +754,15 @@
                                 <div class="entry__arrow">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
-                                    </svg>                                            
+                                    </svg>
                                 </div>
                             </a>
-                            <a class="entry__item" href="#">
+                            <a class="entry__item" href="career.html">
                                 <div class="entry__img">
-                                    <img src="img/entry_img02.jpg">
+                                    <img src="img/entry_img02.webp">
                                 </div>
                                 <div class="entry__blur">
-                                    <img src="img/blur_bg.png">
+                                    <img src="img/blur_bg.webp">
                                 </div>
                                 <h3 class="entry__title">
                                     <span class="entry__title-en">CAREER</span>
@@ -730,24 +771,24 @@
                                 <div class="entry__arrow">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
-                                    </svg>                                            
+                                    </svg>
                                 </div>
                             </a>
-                            <a class="entry__item" href="#">
+                            <a class="entry__item" href="part-time.html">
                                 <div class="entry__img">
-                                    <img src="img/entry_img03.jpg">
+                                    <img src="img/entry_img03.webp">
                                 </div>
                                 <div class="entry__blur">
-                                    <img src="img/blur_bg.png">
+                                    <img src="img/blur_bg.webp">
                                 </div>
                                 <h3 class="entry__title">
-                                    <span class="entry__title-en">NEW GRADUATES</span>
-                                    <span class="entry__title-jp">新卒採用</span>
+                                    <span class="entry__title-en">PART-TIME</span>
+                                    <span class="entry__title-jp">アルバイト採用</span>
                                 </h3>
                                 <div class="entry__arrow">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
-                                    </svg>                                            
+                                    </svg>
                                 </div>
                             </a>
                         </div>
@@ -764,62 +805,62 @@
                             <div class="swiper gallery__slider gallery__slider--ltr">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img01-1.png" alt="">
+                                        <img src="img/gallery_img01-1.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img01-2.png" alt="">
+                                        <img src="img/gallery_img01-2.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img01-3.png" alt="">
+                                        <img src="img/gallery_img01-3.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img01-4.png" alt="">
+                                        <img src="img/gallery_img01-4.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img01-1.png" alt="">
+                                        <img src="img/gallery_img01-1.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img01-2.png" alt="">
+                                        <img src="img/gallery_img01-2.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img01-3.png" alt="">
+                                        <img src="img/gallery_img01-3.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img01-4.png" alt="">
+                                        <img src="img/gallery_img01-4.webp" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper gallery__slider gallery__slider--rtl">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img02-1.png" alt="">
+                                        <img src="img/gallery_img02-1.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img02-2.png" alt="">
+                                        <img src="img/gallery_img02-2.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img02-3.png" alt="">
+                                        <img src="img/gallery_img02-3.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img02-4.png" alt="">
+                                        <img src="img/gallery_img02-4.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img02-1.png" alt="">
+                                        <img src="img/gallery_img02-1.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img02-2.png" alt="">
+                                        <img src="img/gallery_img02-2.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img02-3.png" alt="">
+                                        <img src="img/gallery_img02-3.webp" alt="">
                                     </div>
                                     <div class="swiper-slide gallery__item">
-                                        <img src="img/gallery_img02-4.png" alt="">
+                                        <img src="img/gallery_img02-4.webp" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="gallery__paint">
-                            <img src="img/gallery_paint.png">
+                            <img src="img/gallery_paint.webp">
                         </div>
                     </div>
                 </section>
@@ -833,22 +874,22 @@
                     <div class="footer__title">Make it Wow!</div>
                     <div class="footer__main">
                         <div class="footer__menu">
-                            <a class="footer__menu-link" href="#">CONTACT US</a>
-                            <a class="footer__menu-link" href="#">SITE POLICY</a>
-                            <a class="footer__menu-link" href="#">PRIVACY POLICY</a>
+                            <a class="footer__menu-link" href="https://www.huge.co.jp/about/">CONTACT US</a>
+                            <a class="footer__menu-link" href="https://recruit.huge.co.jp/wp-content/themes/custom/assets/doc/privacy-policy.pdf" target="_blank" rel="noopener noreferrer">SITE POLICY</a>
+                            <a class="footer__menu-link" href="https://www.huge.co.jp/contact/">PRIVACY POLICY</a>
                         </div>
                         <div class="footer__sns">
-                            <a class="footer__sns-link" href="#">
-                                <img src="img/icon_facebook.svg">                                    
+                            <a class="footer__sns-link" href="https://www.facebook.com/huge.restaurant/" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icon_facebook.svg">
+                            </a>
+                            <a class="footer__sns-link" href="https://www.instagram.com/huge_recruit/reel/C-POCjSyL_j/" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icon_insta.webp">
+                            </a>
+                            <a class="footer__sns-link" href="https://www.youtube.com/@yoshihiroshinkawa" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icon_youtube.svg">
                             </a>
                             <a class="footer__sns-link" href="#">
-                                <img src="img/icon_insta.png">                                   
-                            </a>
-                            <a class="footer__sns-link" href="#">
-                                <img src="img/icon_youtube.svg">                                   
-                            </a>
-                            <a class="footer__sns-link" href="#">
-                                <img src="img/icon_note.svg">                                   
+                                <img src="img/icon_note.svg">
                             </a>
                         </div>
                         <div class="footer__copy">
@@ -868,12 +909,23 @@
             </div>
         </footer>
     </div>
+    <div class="message-video-modal js-message-video-modal" aria-hidden="true">
+        <div class="message-video-modal__overlay js-message-video-modal-close"></div>
+        <div class="message-video-modal__dialog" role="dialog" aria-modal="true" aria-label="メッセージ動画">
+            <button type="button" class="message-video-modal__close js-message-video-modal-close" aria-label="閉じる">
+                <span class="message-video-modal__close-icon" aria-hidden="true">×</span>
+            </button>
+            <div class="message-video-modal__video-wrap">
+                <video class="js-message-video-modal-video" controls playsinline preload="metadata"></video>
+            </div>
+        </div>
+    </div>
     <div class="interview-modal js-interview-modal" aria-hidden="true">
         <div class="interview-modal__overlay js-interview-modal-close"></div>
         <div class="interview-modal__dialog" role="dialog" aria-modal="true" aria-label="インタビューモーダル">
             <div class="interview-modal__main">
                 <div class="interview-modal__video-wrap">
-                    <video class="js-interview-modal-video" muted loop playsinline></video>
+                    <video class="js-interview-modal-video" controls playsinline preload="metadata"></video>
                 </div>
                 <div class="interview-modal__entry js-interview-modal-entry"></div>
             </div>

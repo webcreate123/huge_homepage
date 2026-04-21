@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>新卒採用</title>
     <link href="css/fonts.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/responsive.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -17,29 +17,35 @@
         <header class="header no-header-state-update">
             <div class="header__set">
                 <div class="header__left">
-                    <a class="header__logo" href="/">
+                    <a class="header__logo" href="https://www.huge.co.jp/">
                         <img src="img/hd_change_logo.svg" alt="HUGE RECRUITING">
                     </a>
                 </div>
                 <div class="header__menu header__menu--newgrad">
-                    <a class="header__quick-link" href="#">
-                        <span>エリアから探す</span>
+                    <a class="header__quick-link" href="#interview">
+                        <span>インタビュー</span>
                         <span class="header__quick-arrow">
                             <img src="img/arrow-down.svg" alt="">
                         </span>
                     </a>
-                    <a class="header__quick-link" href="#">
-                        <span>ブランドから探す</span>
-                        <img src="img/arrow-down.svg" alt="">
+                    <a class="header__quick-link" href="#faq">
+                        <span>よくある質問</span>
+                        <span class="header__quick-arrow">
+                            <img src="img/arrow-down.svg" alt="">
+                        </span>
                     </a>
-                    <a class="header__quick-link" href="#">
-                        <span>職種から探す</span>
-                        <img src="img/arrow-down.svg" alt="">
+                    <a class="header__quick-link" href="#recruit">
+                        <span>募集要項</span>
+                        <span class="header__quick-arrow">
+                            <img src="img/arrow-down.svg" alt="">
+                        </span>
                     </a>
                     <a class="header__entry-btn newgrad_bg" href="#">
                         <span class="header__entry-label">ENTRY</span>
-                        <span class="header__entry-arrow">
-                            <img src="img/arrow-tag-right.svg" alt="">
+                        <span class="header__entry-arrow" aria-hidden="true">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                            </svg>
                         </span>
                     </a>
                 </div>
@@ -56,16 +62,23 @@
             <div class="header__sidebar-overlay" aria-hidden="true"></div>
             <aside id="header-sidebar" class="header__sidebar" aria-label="サイトメニュー" aria-hidden="true">
                 <nav class="header__sidebar-nav">
-                    <a class="header__sidebar-link" href="#">
+                    <a class="header__sidebar-link header__sidebar-link--single" href="index.html">
+                        <span class="header__sidebar-en">TOP</span>
+                        <span class="header__sidebar-jp">採用トップ</span>
+                    </a>
+                    <a class="header__sidebar-link header__sidebar-link--single" href="about-huge-3min.html">
+                        <span class="header__sidebar-en">HUGE in 3 minutes</span>
+                        <span class="header__sidebar-jp">3分でわかるHUGE</span>
+                    </a>
+                    <a class="header__sidebar-link" href="new-graduates.html">
                         <span class="header__sidebar-en">NEW GRAD</span>
                         <span class="header__sidebar-jp">新卒採用</span>
                     </a>
-                    <a class="header__sidebar-link header__sidebar-link--single" href="#">3分でわかるHUGE</a>
-                    <a class="header__sidebar-link" href="#">
+                    <a class="header__sidebar-link" href="career.html">
                         <span class="header__sidebar-en">CAREER</span>
                         <span class="header__sidebar-jp">中途採用</span>
                     </a>
-                    <a class="header__sidebar-link" href="#">
+                    <a class="header__sidebar-link" href="part-time.html">
                         <span class="header__sidebar-en">PART-TIME</span>
                         <span class="header__sidebar-jp">アルバイト採用</span>
                     </a>
@@ -73,6 +86,16 @@
             </aside>
         </header>
         <!-- HEADER_END -->
+        <nav class="sp-entry-bar js-sp-entry-bar" aria-label="エントリー">
+            <a class="header__entry-btn newgrad_bg sp-entry-bar__btn" href="#">
+                <span class="header__entry-label">ENTRY</span>
+                <span class="header__entry-arrow" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                    </svg>
+                </span>
+            </a>
+        </nav>
         <!-- CONTAIN_START -->
         <main class="content">
             <div class="page__newgrad">
@@ -80,8 +103,8 @@
                     <div class="page__fv-main">
                         <div class="page__mainVisual">
                             <picture>
-                                <source srcset="img/page_newgrad_sp.png" media="(max-width: 450px)">
-                                <img src="img/page_newgrad.png">
+                                <source srcset="img/page_newgrad_sp.webp" media="(max-width: 450px)">
+                                <img src="img/page_newgrad.webp">
                             </picture>
                         </div>
                         <h1 class="page__title">
@@ -90,7 +113,7 @@
                         </h1>
                     </div>
                     <div class="page__overlay">
-                        <img src="img/page_overlay.png">
+                        <img src="img/page_overlay.webp">
                     </div>
                 </div>
             </div>
@@ -100,22 +123,34 @@
                     <div class="container">
                         <div class="clients__content">
                             <div class="clients__item">
-                                <img src="img/clients_img01.png">
+                                <a href="https://job.mynavi.jp/27/pc/search/corp200076/outline.html" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img01.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img02.png">
+                                <a href="https://job.rikunabi.com/selection/job_descriptions/87c2fc2bdd2f757d/?betk=SoDh6I3mwWg5ZQUYR0IbzkdCdPP&jrtk=5-nrt1-0-1jjgfbnlhht7i800-87c2fc2bdd2f757d--SoCy6M3mwWhI1zvw50PbzkdCdPP&seqNo=1&pageNo=1&from=job_search&job_list_type=recruit-newgrad-serp-selection" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img02.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img03.png">
+                                <a href="https://www.careermap.jp/corporations/11937" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img03.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img04.png">
+                                <a href="https://www.flabo.site/2027/job/170/" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img04.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img05.png">
+                                <a href="https://www.openwork.jp/a0C1000000qdOsv/job/" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img05.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img06.png">
+                                <a href="https://job.career-tasu.jp/corp/00084463/employment/detail/1001/" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img06.webp">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -166,21 +201,16 @@
                                 <img src="img/hospitality_paint.svg">
                             </div>
                         </div>
-                    </div>                    
-
-                    <div class="hospitality__paint1">
-                        <img src="img/hospitality_paint1.png" class="is__TBhide">
-                        <img src="img/hospitality_paint1_sp.png" class="is__TBshow">
                     </div>
                     <div class="hx10"></div>
                 </div>
-                <div class="newgrad__interivew">
-                    <div class="hx16"></div>
+                <div class="newgrad__interivew" id="interview">
+                    <div class="hx12"></div>
                     <div class="interview__inner">
                         <div class="interview__heading">
                             <h2 class="section__title">
                                 <span class="section__title-paint">
-                                    <img src="img/section_ttl_paint02.png">
+                                    <img src="img/section_ttl_point02.webp">
                                 </span>
                                 <span class="section__title-txt">INTERVIEW</span>
                             </h2>
@@ -190,7 +220,7 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
                                         <div class="interview__video">
-                                            <video src="video/interview_video01.mp4" muted loop playsinline poster="img/interview_img1.png"></video>
+                                            <video src="video/video_interview01.mp4" muted loop playsinline poster="img/interview_img1.png"></video>
                                             <span class="interview__btn">
                                                 <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
@@ -199,7 +229,33 @@
                                         </div>
                                         <div class="interview__main">
                                             <div class="interview__category-list">
-                                                <span class="interview__category interview__category--entry">スタッフ入社→社員</span>
+                                                <span class="interview__category interview__category--newgrad">新卒入社</span>
+                                                <span class="interview__category">大卒</span>
+                                            </div>
+                                            <div class="interview__txt">
+                                                <p>
+                                                    お仕事のターニングポイントはソムリエ資格を取得したこと？
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="interview__name">ホール</div>
+                                    </div>
+                                    <!-- </div>
+                                    <div class="swiper-slide interview__item">
+                                        <div class="interview__video">
+                                            <img src="img/interview_img.webp">
+                                            <span class="interview__btn">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z"
+                                                        fill="#FFD700" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="interview__main">
+                                            <div class="interview__category-list">
+                                                <span
+                                                    class="interview__category interview__category--newgrad">新卒入社</span>
                                                 <span class="interview__category">大卒</span>
                                             </div>
                                             <div class="interview__txt">
@@ -208,36 +264,164 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="interview__name">ホール</div>
+                                        <div class="interview__name">シェフ</div>
+                                    </div> -->
+                                    <!-- <div class="swiper-slide interview__item">
+                                        <div class="interview__video">
+                                            <img src="img/interview_img.webp">
+                                            <span class="interview__btn">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z"
+                                                        fill="#FFD700" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="interview__main">
+                                            <div class="interview__category-list">
+                                                <span
+                                                    class="interview__category interview__category--career">スタッフ入社→社員</span>
+                                                <span class="interview__category">大卒</span>
+                                            </div>
+                                            <div class="interview__txt">
+                                                <p>
+                                                    スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="interview__name">International Leader</div>
                                     </div>
+                                    <div class="swiper-slide interview__item">
+                                        <div class="interview__video">
+                                            <img src="img/interview_img.webp">
+                                            <span class="interview__btn">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z"
+                                                        fill="#FFD700" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="interview__main">
+                                            <div class="interview__category-list">
+                                                <span
+                                                    class="interview__category interview__category--career">スタッフ入社→社員</span>
+                                                <span class="interview__category">大卒</span>
+                                            </div>
+                                            <div class="interview__txt">
+                                                <p>
+                                                    スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="interview__name">キッチン</div>
+                                    </div>
+                                    <div class="swiper-slide interview__item">
+                                        <div class="interview__video">
+                                            <img src="img/interview_img.webp">
+                                            <span class="interview__btn">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z"
+                                                        fill="#FFD700" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="interview__main">
+                                            <div class="interview__category-list">
+                                                <span
+                                                    class="interview__category interview__category--career">スタッフ入社→社員</span>
+                                                <span class="interview__category">大卒</span>
+                                            </div>
+                                            <div class="interview__txt">
+                                                <p>
+                                                    スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="interview__name">キッチン</div>
+                                    </div>
+                                    <div class="swiper-slide interview__item">
+                                        <div class="interview__video">
+                                            <img src="img/interview_img.webp">
+                                            <span class="interview__btn">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z"
+                                                        fill="#FFD700" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="interview__main">
+                                            <div class="interview__category-list">
+                                                <span
+                                                    class="interview__category interview__category--career">スタッフ入社→社員</span>
+                                                <span class="interview__category">大卒</span>
+                                            </div>
+                                            <div class="interview__txt">
+                                                <p>
+                                                    スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="interview__name">キッチン</div>
+                                    </div>
+                                    <div class="swiper-slide interview__item">
+                                        <div class="interview__video">
+                                            <img src="img/interview_img.webp">
+                                            <span class="interview__btn">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z"
+                                                        fill="#FFD700" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="interview__main">
+                                            <div class="interview__category-list">
+                                                <span
+                                                    class="interview__category interview__category--career">スタッフ入社→社員</span>
+                                                <span class="interview__category">大卒</span>
+                                            </div>
+                                            <div class="interview__txt">
+                                                <p>
+                                                    スタッフそれぞれが個性や強みを生かして、チームでレストランを創り上げる！
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="interview__name">キッチン</div>
+                                    </div> -->
                                 </div>
                                 <div class="interview__controls">
-                                    <div class="swiper-button-prev interview__nav-btn interview__nav-btn--prev" aria-label="前のスライド">
+                                    <div class="swiper-button-prev interview__nav-btn interview__nav-btn--prev"
+                                        aria-label="前のスライド">
                                         <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.74108 0.707163L0.707101 6.74114L6.74108 12.7751M1.46135 6.74114L17.6777 6.74114" stroke="white" stroke-linecap="square"/>
-                                        </svg>                                            
+                                            <path
+                                                d="M6.74108 0.707163L0.707101 6.74114L6.74108 12.7751M1.46135 6.74114L17.6777 6.74114"
+                                                stroke="white" stroke-linecap="square" />
+                                        </svg>
                                     </div>
                                     <div class="swiper-pagination interview__pagination"></div>
-                                    <div class="swiper-button-next interview__nav-btn interview__nav-btn--next" aria-label="次のスライド">
+                                    <div class="swiper-button-next interview__nav-btn interview__nav-btn--next"
+                                        aria-label="次のスライド">
                                         <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.4365 0.707163L17.4705 6.74114L11.4365 12.7751M16.7163 6.74114L0.499948 6.74114" stroke="white" stroke-linecap="square"/>
-                                        </svg>                                            
+                                            <path
+                                                d="M11.4365 0.707163L17.4705 6.74114L11.4365 12.7751M16.7163 6.74114L0.499948 6.74114"
+                                                stroke="white" stroke-linecap="square" />
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hx10"></div>
                 </div>
-                
-                
-                <div class="newgrad__faq">
+                <div class="newgrad__faq" id="faq">
                     <div class="container">
                         <div class="faq__inner">
                             <div class="section__heading">
                                 <div class="section__title">
                                     <span class="section__title-paint">
-                                        <img src="img/section_ttl_paint02.png">
+                                        <img src="img/section_ttl_paint02.webp">
                                     </span>
                                     <span class="section__title-txt">FAQ</span>
                                 </div>
@@ -250,67 +434,67 @@
                                         <div class="faq__side-nav">
                                             <a class="faq__nav-item -active" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">選考フローについて</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">説明会の内容について</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">研修制度について</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">交通費・手当について</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">転勤について</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
-                                                <span class="faq__nav-txt">資格について</span>
+                                                <span class="faq__nav-txt">キッチン採用について</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">休暇について</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">求める人物像について</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">どんな人が活躍しているか</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">留学生の採用について</span>
                                             </a>
                                             <a class="faq__nav-item" href="#">
                                                 <span class="faq__nav-icon">
-                                                    <img src="img/news_ttl_paint.png">
+                                                    <img src="img/news_ttl_paint.webp">
                                                 </span>
                                                 <span class="faq__nav-txt">入社後の職種変更について</span>
                                             </a>
@@ -321,7 +505,7 @@
                                                 <span class="faq__side-dropdown-btn-arrow">
                                                     <svg viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M5.19531 9L10.3915 0H-0.00083971L5.19531 9Z" fill="#333333"/>
-                                                    </svg>                                                        
+                                                    </svg>
                                                 </span>
                                             </div>
                                             <div class="faq__side-dropdown-menu">
@@ -359,19 +543,19 @@
                                                 <span class="faq__flow-arrow">
                                                     <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M11.4357 0.707163L17.4697 6.74114L11.4357 12.7751M16.7154 6.74114L0.499094 6.74114" stroke="#333333" stroke-linecap="square"/>
-                                                    </svg>                                                        
+                                                    </svg>
                                                 </span>
                                                 <div class="faq__flow-item">役員面接</div>
                                                 <span class="faq__flow-arrow">
                                                     <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M11.4357 0.707163L17.4697 6.74114L11.4357 12.7751M16.7154 6.74114L0.499094 6.74114" stroke="#333333" stroke-linecap="square"/>
-                                                    </svg>                                                        
+                                                    </svg>
                                                 </span>
                                                 <div class="faq__flow-item">内定</div>
                                             </div>
                                             <div class="faq__answer-txt">
                                                 <p>
-                                                    
+
                                                     面接が1回となることで不安を感じる方もいらっしゃると思いますので、面接前の人事が行うカジュアル面談もご希望の方には実施いたします。安心して選考へお進みください。<br />
                                                     内定後は、HUGEを知る機会を様々な角度で設けていますので、是非楽しみにしていてくださいね。
                                                 </p>
@@ -381,22 +565,34 @@
                                             </div>
                                             <div class="faq__answer-clients">
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img01.png">
+                                                    <a href="https://job.mynavi.jp/27/pc/search/corp200076/outline.html" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img01.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img02.png">
+                                                    <a href="https://job.rikunabi.com/selection/job_descriptions/87c2fc2bdd2f757d/?betk=SoDh6I3mwWg5ZQUYR0IbzkdCdPP&jrtk=5-nrt1-0-1jjgfbnlhht7i800-87c2fc2bdd2f757d--SoCy6M3mwWhI1zvw50PbzkdCdPP&seqNo=1&pageNo=1&from=job_search&job_list_type=recruit-newgrad-serp-selection" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img02.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img03.png">
+                                                    <a href="https://www.careermap.jp/corporations/11937" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img03.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img04.png">
+                                                    <a href="https://www.flabo.site/2027/job/170/" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img04.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img05.png">
+                                                    <a href="https://www.openwork.jp/a0C1000000qdOsv/job/" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img05.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img06.png">
+                                                    <a href="https://job.career-tasu.jp/corp/00084463/employment/detail/1001/" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img06.webp">
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -415,7 +611,7 @@
                                             <div class="faq__answer-voice">
                                                 <div class="faq__voice-item">
                                                     <div class="faq__voice-img">
-                                                        <img src="img/faq_voice01.png">
+                                                        <img src="img/faq_voice01.webp">
                                                     </div>
                                                     <div class="faq__voice-main">
                                                         <div class="faq__voice-title">
@@ -432,7 +628,7 @@
                                                 </div>
                                                 <div class="faq__voice-item">
                                                     <div class="faq__voice-img">
-                                                        <img src="img/faq_voice02.png">
+                                                        <img src="img/faq_voice02.webp">
                                                     </div>
                                                     <div class="faq__voice-main">
                                                         <div class="faq__voice-title">
@@ -449,7 +645,7 @@
                                                 </div>
                                                 <div class="faq__voice-item">
                                                     <div class="faq__voice-img">
-                                                        <img src="img/faq_voice03.png">
+                                                        <img src="img/faq_voice03.webp">
                                                     </div>
                                                     <div class="faq__voice-main">
                                                         <div class="faq__voice-title">
@@ -466,27 +662,39 @@
                                             <div class="faq__answer-txt">
                                                 <p>
                                                     ※2026年度の選考においての内容になります。<br />
-                                                    ※開催内容は年度により変更されます。該当年度の内容はナビサイトからご確認ください。							
+                                                    ※開催内容は年度により変更されます。該当年度の内容はナビサイトからご確認ください。
                                                 </p>
                                             </div>
                                             <div class="faq__answer-clients">
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img01.png">
+                                                    <a href="https://job.mynavi.jp/27/pc/search/corp200076/outline.html" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img01.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img02.png">
+                                                    <a href="https://job.rikunabi.com/selection/job_descriptions/87c2fc2bdd2f757d/?betk=SoDh6I3mwWg5ZQUYR0IbzkdCdPP&jrtk=5-nrt1-0-1jjgfbnlhht7i800-87c2fc2bdd2f757d--SoCy6M3mwWhI1zvw50PbzkdCdPP&seqNo=1&pageNo=1&from=job_search&job_list_type=recruit-newgrad-serp-selection" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img02.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img03.png">
+                                                    <a href="https://www.careermap.jp/corporations/11937" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img03.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img04.png">
+                                                    <a href="https://www.flabo.site/2027/job/170/" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img04.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img05.png">
+                                                    <a href="https://www.openwork.jp/a0C1000000qdOsv/job/" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img05.webp">
+                                                    </a>
                                                 </div>
                                                 <div class="faq__clients-item">
-                                                    <img src="img/clients_img06.png">
+                                                    <a href="https://job.career-tasu.jp/corp/00084463/employment/detail/1001/" target="_blank" rel="noopener noreferrer">
+                                                        <img src="img/clients_img06.webp">
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -534,35 +742,41 @@
                                                     その他制度や福利厚生、働く環境などを<a class="faq__answer-link" href="#">3分で分かるHUGE</a>のページに詳しく載せております。
                                                 </p>
                                             </div>
-                                            <div class="faq__answer-campaign js-3m-hover">
-                                                <div class="faq__campaign-bg">
-                                                    <picture>
-                                                        <source srcset="img/campaign_bg_sp.png" media="(max-width: 768px)">
-                                                        <img src="img/campaign_bg.png">
-                                                    </picture>
-                                                    <img class="campaign__bg-hover" src="img/campaign_bg_hover.jpg" alt="">
-                                                </div>
-                                                <div class="faq__campaign-content">
-                                                    <div class="faq__campaign-title">
-                                                        <img src="img/common_campaign_mark.svg">
+                                            <div class="faq__answer-campaign">
+                                                <a class="faq__campaign-link" href="about-huge-3min.html">
+                                                    <div class="faq__campaign-bg">
+                                                        <picture class="faq__campaign-bg-default">
+                                                            <source srcset="img/campaign_bg_sp.webp" media="(max-width: 768px)">
+                                                            <img src="img/campaign_bg.webp" alt="">
+                                                        </picture>
+                                                        <img class="faq__campaign-bg-hover" src="img/campaign_bg_hover.webp" alt="">
                                                     </div>
-                                                    <div class="faq__campaign-main">
-                                                        <div class="faq__campaign-txt">
-                                                            <p>
-                                                                HUGEは2025年に創業20年を迎えました。<br />
-                                                                最高の仲間たちと共に積み重ねたHUGEを物語る数字やキーワード、<br class="is__PC" />
-                                                                整備してきた働く環境、独自の制度や福利厚生など。<br />
-                                                                活躍していただくうえで、皆さんに知ってほしいことを<br class="is__PC" />
-                                                                まとめています。
-                                                            </p>
+                                                    <div class="faq__campaign-content">
+                                                        <div class="faq__campaign-title">
+                                                            <img src="img/campaign_mark.svg" alt="">
                                                         </div>
-                                                        <div class="faq__campaign-arrow js-arrow-rotate">
-                                                            <svg viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M9.47147 0.586213L14.4685 5.58329L9.47147 10.5804M13.8439 5.58329L0.414275 5.58329" stroke="#333333" stroke-width="0.829225" stroke-linecap="square"/>
-                                                            </svg>                                                                
+                                                        <div class="faq__campaign-main">
+                                                            <div class="faq__campaign-txt">
+                                                                <p>
+                                                                    HUGEは2025年に創業20年を迎えました。<br />
+                                                                    最高の仲間たちと共に積み重ねたHUGEを物語る数字やキーワード、<br class="is__PC" />
+                                                                    整備してきた働く環境、独自の制度や福利厚生など。<br />
+                                                                    活躍していただくうえで、皆さんに知ってほしいことを<br class="is__PC" />
+                                                                    まとめています。
+                                                                </p>
+                                                            </div>
+                                                            <div class="faq__campaign-arrow">
+                                                                <svg viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M9.47147 0.586213L14.4685 5.58329L9.47147 10.5804M13.8439 5.58329L0.414275 5.58329"
+                                                                        stroke="#333333"
+                                                                        stroke-width="0.829225"
+                                                                        stroke-linecap="square" />
+                                                                </svg>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -702,14 +916,14 @@
                     </div>
                     <div class="hx16"></div>
                 </div>
-                <div class="newgrad__recruit">
+                <div class="newgrad__recruit" id="recruit">
                     <div class="hx10"></div>
                     <div class="container">
                         <div class="recruit__inner">
                             <div class="section__heading">
                                 <h2 class="section__title">
                                     <span class="section__title-paint">
-                                        <img src="img/section_ttl_paint02.png">
+                                        <img src="img/section_ttl_paint02.webp">
                                     </span>
                                     <span class="section__title-txt">RECRUIT</span>
                                 </h2>
@@ -967,22 +1181,34 @@
                     <div class="container">
                         <div class="clients__content">
                             <div class="clients__item">
-                                <img src="img/clients_img01.png">
+                                <a href="https://job.mynavi.jp/27/pc/search/corp200076/outline.html" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img01.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img02.png">
+                                <a href="https://job.rikunabi.com/selection/job_descriptions/87c2fc2bdd2f757d/?betk=SoDh6I3mwWg5ZQUYR0IbzkdCdPP&jrtk=5-nrt1-0-1jjgfbnlhht7i800-87c2fc2bdd2f757d--SoCy6M3mwWhI1zvw50PbzkdCdPP&seqNo=1&pageNo=1&from=job_search&job_list_type=recruit-newgrad-serp-selection" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img02.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img03.png">
+                                <a href="https://www.careermap.jp/corporations/11937" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img03.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img04.png">
+                                <a href="https://www.flabo.site/2027/job/170/" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img04.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img05.png">
+                                <a href="https://www.openwork.jp/a0C1000000qdOsv/job/" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img05.webp">
+                                </a>
                             </div>
                             <div class="clients__item">
-                                <img src="img/clients_img06.png">
+                                <a href="https://job.career-tasu.jp/corp/00084463/employment/detail/1001/" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/clients_img06.webp">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -996,62 +1222,62 @@
                         <div class="swiper gallery__slider gallery__slider--ltr">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img01-1.png" alt="">
+                                    <img src="img/gallery_img01-1.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img01-2.png" alt="">
+                                    <img src="img/gallery_img01-2.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img01-3.png" alt="">
+                                    <img src="img/gallery_img01-3.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img01-4.png" alt="">
+                                    <img src="img/gallery_img01-4.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img01-1.png" alt="">
+                                    <img src="img/gallery_img01-1.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img01-2.png" alt="">
+                                    <img src="img/gallery_img01-2.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img01-3.png" alt="">
+                                    <img src="img/gallery_img01-3.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img01-4.png" alt="">
+                                    <img src="img/gallery_img01-4.webp" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper gallery__slider gallery__slider--rtl">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img02-1.png" alt="">
+                                    <img src="img/gallery_img02-1.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img02-2.png" alt="">
+                                    <img src="img/gallery_img02-2.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img02-3.png" alt="">
+                                    <img src="img/gallery_img02-3.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img02-4.png" alt="">
+                                    <img src="img/gallery_img02-4.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img02-1.png" alt="">
+                                    <img src="img/gallery_img02-1.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img02-2.png" alt="">
+                                    <img src="img/gallery_img02-2.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img02-3.png" alt="">
+                                    <img src="img/gallery_img02-3.webp" alt="">
                                 </div>
                                 <div class="swiper-slide gallery__item">
-                                    <img src="img/gallery_img02-4.png" alt="">
+                                    <img src="img/gallery_img02-4.webp" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="gallery__paint">
-                        <img src="img/gallery_paint.png">
+                        <img src="img/gallery_paint.webp">
                     </div>
                 </div>
             </section>
@@ -1064,22 +1290,22 @@
                     <div class="footer__title">Make it Wow!</div>
                     <div class="footer__main">
                         <div class="footer__menu">
-                            <a class="footer__menu-link" href="#">CONTACT US</a>
-                            <a class="footer__menu-link" href="#">SITE POLICY</a>
-                            <a class="footer__menu-link" href="#">PRIVACY POLICY</a>
+                            <a class="footer__menu-link" href="https://www.huge.co.jp/about/">CONTACT US</a>
+                            <a class="footer__menu-link" href="https://recruit.huge.co.jp/wp-content/themes/custom/assets/doc/privacy-policy.pdf" target="_blank" rel="noopener noreferrer">SITE POLICY</a>
+                            <a class="footer__menu-link" href="https://www.huge.co.jp/contact/">PRIVACY POLICY</a>
                         </div>
                         <div class="footer__sns">
-                            <a class="footer__sns-link" href="#">
-                                <img src="img/icon_facebook.svg">                                    
+                            <a class="footer__sns-link" href="https://www.facebook.com/huge.restaurant/" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icon_facebook.svg">
+                            </a>
+                            <a class="footer__sns-link" href="https://www.instagram.com/huge_recruit/reel/C-POCjSyL_j/" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icon_insta.webp">
+                            </a>
+                            <a class="footer__sns-link" href="https://www.youtube.com/@yoshihiroshinkawa" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icon_youtube.svg">
                             </a>
                             <a class="footer__sns-link" href="#">
-                                <img src="img/icon_insta.png">                                   
-                            </a>
-                            <a class="footer__sns-link" href="#">
-                                <img src="img/icon_youtube.svg">                                   
-                            </a>
-                            <a class="footer__sns-link" href="#">
-                                <img src="img/icon_note.svg">                                   
+                                <img src="img/icon_note.svg">
                             </a>
                         </div>
                         <div class="footer__copy">
@@ -1099,83 +1325,12 @@
             </div>
         </footer>
     </div>
-    
-    <section class="home__entry hidden">
-        <div class="hx7"></div>
-        <div class="entry__inner">
-            <div class="section__heading entry__heading">
-                <h2 class="section__title">
-                    <span class="section__title-paint">
-                        <img src="img/section_ttl_paint.png">
-                    </span>
-                    <span class="section__title-txt">ENTRY</span>
-                </h2>
-            </div>
-            <div class="entry__content">
-                <a class="entry__item" href="#">
-                    <div class="entry__img">
-                        <img src="img/entry_img01.jpg">
-                    </div>
-                    <div class="entry__blur">
-                        <img src="img/blur_bg.png">
-                    </div>
-                    <h3 class="entry__title">
-                        <span class="entry__title-en">NEW GRADUATES</span>
-                        <span class="entry__title-jp">新卒採用</span>
-                    </h3>
-                    <div class="entry__arrow">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
-                        </svg>                                            
-                    </div>
-                </a>
-                <a class="entry__item" href="#">
-                    <div class="entry__img">
-                        <img src="img/entry_img02.jpg">
-                    </div>
-                    <div class="entry__blur">
-                        <img src="img/blur_bg.png">
-                    </div>
-                    <h3 class="entry__title">
-                        <span class="entry__title-en">CAREER</span>
-                        <span class="entry__title-jp">中途採用</span>
-                    </h3>
-                    <div class="entry__arrow">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
-                        </svg>                                            
-                    </div>
-                </a>
-                <a class="entry__item" href="#">
-                    <div class="entry__img">
-                        <img src="img/entry_img03.jpg">
-                    </div>
-                    <div class="entry__blur">
-                        <img src="img/blur_bg.png">
-                    </div>
-                    <h3 class="entry__title">
-                        <span class="entry__title-en">NEW GRADUATES</span>
-                        <span class="entry__title-jp">新卒採用</span>
-                    </h3>
-                    <div class="entry__arrow">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
-                        </svg>                                            
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="entry__paint">
-            <img src="img/entry_paint.svg">
-        </div>
-        <div class="hx10"></div>
-    </section>    
     <div class="interview-modal js-interview-modal" aria-hidden="true">
         <div class="interview-modal__overlay js-interview-modal-close"></div>
         <div class="interview-modal__dialog" role="dialog" aria-modal="true" aria-label="インタビューモーダル">
             <div class="interview-modal__main">
                 <div class="interview-modal__video-wrap">
-                    <video class="js-interview-modal-video" muted loop playsinline></video>
+                    <video class="js-interview-modal-video" controls playsinline preload="metadata"></video>
                 </div>
                 <div class="interview-modal__entry js-interview-modal-entry"></div>
             </div>

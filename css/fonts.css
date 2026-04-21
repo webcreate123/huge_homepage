@@ -1,9 +1,12 @@
 @charset "UTF-8";
 /* ----------Font Family Noto Sans Jp------- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800&display=swap");
 
 /* ----------Font Family Lexend Deca------- */
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800&display=swap");
 
 /* ----------Font Family Lexend------- */
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* ----------Font Family Cinzel------- */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@100;200;300;400;500;600;700;800&display=swap");

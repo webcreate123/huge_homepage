@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3分で分かるHUGE</title>
+    <link href="css/fonts.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- HEADER_START -->
+        <header class="header no-header-state-update" style="opacity: 0; visibility: hidden;">
+            <div class="header__set">
+                <div class="header__left">
+                    <a class="header__logo" href="https://www.huge.co.jp/">
+                        <img src="img/hd_change_logo.svg" alt="HUGE RECRUITING">
+                    </a>
+                </div>
+                <div class="header__menu">
+                    <a class="header__menu-link" href="new-graduates.html">
+                        <div class="header__menu-shape">
+                            <div class="header__menu-cap">
+                                <span class="headmenu__cap-en">NEW GRAD</span>
+                                <span class="headmenu__cap-jp">新卒採用</span>
+                            </div>
+                            <div class="header__menu-arrow">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="header__menu-link" href="career.html">
+                        <div class="header__menu-shape">
+                            <div class="header__menu-cap">
+                                <span class="headmenu__cap-en">CAREER</span>
+                                <span class="headmenu__cap-jp">中途採用</span>
+                            </div>
+                            <div class="header__menu-arrow">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="header__menu-link" href="part-time.html">
+                        <div class="header__menu-shape">
+                            <div class="header__menu-cap">
+                                <span class="headmenu__cap-en">PART-TIME</span>
+                                <span class="headmenu__cap-jp">アルバイト採用</span>
+                            </div>
+                            <div class="header__menu-arrow">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="header__hamburger js_hamburger">
+                    <button type="button" class="header__hamburger-btn" aria-expanded="false" aria-controls="header-sidebar">
+                        <div class="header__hamburger-line-wrap">
+                            <span class="header__hamburger-line"></span>
+                            <span class="header__hamburger-line"></span>
+                        </div>
+                        <span class="header__hamburger-txt">MENU</span>
+                    </button>
+                </div>
+            </div>
+            <div class="header__sidebar-overlay" aria-hidden="true"></div>
+            <aside id="header-sidebar" class="header__sidebar" aria-label="サイトメニュー" aria-hidden="true">
+                <nav class="header__sidebar-nav">
+                    <a class="header__sidebar-link header__sidebar-link--single" href="index.html">
+                        <span class="header__sidebar-en">TOP</span>
+                        <span class="header__sidebar-jp">採用トップ</span>
+                    </a>
+                    <a class="header__sidebar-link header__sidebar-link--single" href="about-huge-3min.html">
+                        <span class="header__sidebar-en">HUGE in 3 minutes</span>
+                        <span class="header__sidebar-jp">3分でわかるHUGE</span>
+                    </a>
+                    <a class="header__sidebar-link" href="new-graduates.html">
+                        <span class="header__sidebar-en">NEW GRAD</span>
+                        <span class="header__sidebar-jp">新卒採用</span>
+                    </a>
+                    <a class="header__sidebar-link" href="career.html">
+                        <span class="header__sidebar-en">CAREER</span>
+                        <span class="header__sidebar-jp">中途採用</span>
+                    </a>
+                    <a class="header__sidebar-link" href="part-time.html">
+                        <span class="header__sidebar-en">PART-TIME</span>
+                        <span class="header__sidebar-jp">アルバイト採用</span>
+                    </a>
+                </nav>
+            </aside>
+        </header>
+        <!-- HEADER_END -->
+        <!-- CONTAIN_START -->
+        <main class="content">
+            <div class="page__about">
+                <div class="page__fv">
+                    <div class="page__logo">
+                        <img src="img/campaign_mark.svg">
+                    </div>
+                    <div class="page__overlay">
+                        <picture>
+                            <source srcset="img/page_overlay_sp.webp" media="(max-width: 450px)">
+                            <img src="img/page_overlay.webp">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="page__main">
+                <div class="about__nav">
+                    <div class="hx10"></div>
+                    <div class="container">
+                        <div class="page__nav-inner">
+                            <a class="about__nav-link" href="#data">
+                                <span class="about__nav-txt">データと<br class="is__SP" />キーワードで見る</span>
+                                <span class="about__nav-arrow">
+                                    <svg viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.24967 7.33529L4.47844 11.1065L0.707201 7.33529M4.47844 10.6351L4.47844 0.499921" stroke="white" stroke-linecap="square"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a class="about__nav-link" href="#place">
+                                <span class="about__nav-txt">働く環境・制度・福利厚生 </span>
+                                <span class="about__nav-arrow">
+                                    <svg viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.24967 7.33529L4.47844 11.1065L0.707201 7.33529M4.47844 10.6351L4.47844 0.499921" stroke="white" stroke-linecap="square"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a class="about__nav-link" href="#business">
+                                <span class="about__nav-txt">事業内容</span>
+                                <span class="about__nav-arrow">
+                                    <svg viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.24967 7.33529L4.47844 11.1065L0.707201 7.33529M4.47844 10.6351L4.47844 0.499921" stroke="white" stroke-linecap="square"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="data" class="about__data">
+                    <div class="hx16"></div>
+                    <div class="data__inner">
+                        <div class="section__heading data__heading">
+                            <div class="section__title">
+                                <span class="section__title-paint">
+                                    <img src="img/section_ttl_paint.webp">
+                                </span>
+                                <span class="section__title-txt">DATA&<br class="is__SP" />KEYWORDS</span>
+                            </div>
+                            <div class="section__title-jp">データとキーワードで見る</div>
+                        </div>
+                        <div class="data__history">
+                            <div class="history__heading">
+                                <h3 class="history__title">年表・トピック</h3>
+                                <div class="history__controls history__controls--desktop">
+                                    <button type="button" class="history__control-btn history__prev-btn" aria-label="前のスライド">
+                                        <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.74108 0.707163L0.707101 6.74114L6.74108 12.7751M1.46135 6.74114L17.6777 6.74114" stroke="white" stroke-linecap="square"/>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="history__control-btn history__next-btn" aria-label="次のスライド">
+                                        <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.4367 0.707163L17.4706 6.74114L11.4367 12.7751M16.7164 6.74114L0.50007 6.74114" stroke="white" stroke-linecap="square"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="history__content">
+                                <div class="swiper history__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide history__item history__item--important">
+                                            <div class="history__label">
+                                                <span class="history__label-txt">2005年 創業当初より新卒採用を行っています！</span>
+                                                <span class="history__label-tip"></span>
+                                            </div>
+                                            <div class="history__meta">
+                                                <div class="history__year">2005</div>
+                                            </div>
+                                            <div class="history__main">
+                                                <div class="history__img">
+                                                    <img src="img/about/history_img01.webp">
+                                                </div>
+                                                <div class="history__summary">
+                                                    <div class="history__summary-time">2005.9.27 設立</div>
+                                                </div>
+                                                <button type="button" class="history__btn" aria-haspopup="dialog" aria-controls="history-modal">
+                                                    <span class="history__btn-txt">VIEW MORE</span>
+                                                    <span class="history__btn-arrow">
+                                                        <svg viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7.33529 0.707113L11.1065 4.47835L7.33529 8.24959M10.6351 4.47835L0.499922 4.47835" stroke="white" stroke-linecap="square"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="history__modal-result">17:00以降ディナータイム<br />食事・ドリンク 全品30% OFF</div>
+                                            <div class="history__modal-detail">
+                                                <p>
+                                                    震災の影響で街全体が自粛ムードに包まれていた当時。「こんな時だからこそ、レストランで少しでも元気になってもらいたい」そんな思いからHUGEは「おかえりなさいキャンペーン」を実施。再びお客様がレストランに足を運ぶきっかけをつくり、テーブルに笑顔を取り戻す取り組みとなりました。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item">
+                                            <div class="history__label">
+                                                <span class="history__label-txt">2007年 初の新卒社員として3名が入社！</span>
+                                                <span class="history__label-tip"></span>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2006</div>
+                                                    <div class="history__store">2店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        Café RIGOLETTO オープン<br />
+                                                        RESTAURANT DAZZLE オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2007</div>
+                                                    <div class="history__store">3店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        RIGOLETTO WINE AND BAR オープン<br />
+                                                        RIGOLETTO KITCHEN オープン<br />
+                                                        RIGOLETTO TAPAS LOUNGE オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2008</div>
+                                                    <div class="history__store">1店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        RIGOLETTO BAR AND GRILL
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item">
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2009</div>
+                                                    <div class="history__store">3店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        RIGOLETTO SHORT HILLS オープン<br />
+                                                        新 -ARATA- オープン<br />
+                                                        THE RIGOLETTO ocean club オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2010</div>
+                                                    <div class="history__store history__store--brown">3店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>MUCHO modern mexicano オープン</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item history__item--important">
+                                            <div class="history__meta">
+                                                <div class="history__year">2011</div>
+                                            </div>
+                                            <div class="history__main">
+                                                <div class="history__des">
+                                                    <p>
+                                                        Hacienda del cielo オープン<br />
+                                                        RIGOLETTO spice marcket オープン
+                                                    </p>
+                                                </div>
+                                                <div class="history__img">
+                                                    <img src="img/about/history_img02.webp">
+                                                </div>
+                                                <div class="history__summary">
+                                                    <div class="history__summary-time">2011.3.28-4.4【7日間】</div>
+                                                    <div class="history__summary-title">「おかえりなさい」キャンペーン</div>
+                                                </div>
+                                                <button type="button" class="history__btn" aria-haspopup="dialog" aria-controls="history-modal">
+                                                    <span class="history__btn-txt">VIEW MORE</span>
+                                                    <span class="history__btn-arrow">
+                                                        <svg viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7.33529 0.707113L11.1065 4.47835L7.33529 8.24959M10.6351 4.47835L0.499922 4.47835" stroke="white" stroke-linecap="square"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="history__modal-result">17:00以降ディナータイム<br />食事・ドリンク 全品30% OFF</div>
+                                            <div class="history__modal-detail">
+                                                <p>
+                                                    震災の影響で街全体が自粛ムードに包まれていた当時。「こんな時だからこそ、レストランで少しでも元気になってもらいたい」そんな思いからHUGEは「おかえりなさいキャンペーン」を実施。再びお客様がレストランに足を運ぶきっかけをつくり、テーブルに笑顔を取り戻す取り組みとなりました。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item">
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2012</div>
+                                                    <div class="history__store">1店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        RIGOLETTO ROTISSERIE AND WINE オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2007</div>
+                                                    <div class="history__store">3店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        RIGOLETTO WINE AND BAR オープン<br />
+                                                        RIGOLETTO KITCHEN オープン<br />
+                                                        RIGOLETTO TAPAS LOUNGE オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2008</div>
+                                                    <div class="history__store">1店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        RIGOLETTO BAR AND GRILL
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item">
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2012</div>
+                                                    <div class="history__store">1店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        RIGOLETTO ROTISSERIE AND WINE オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item history__item--important">
+                                            <div class="history__meta">
+                                                <div class="history__year">2013</div>
+                                                <div class="history__store">2店舗</div>
+                                            </div>
+                                            <div class="history__main">
+                                                <div class="history__des">
+                                                    <p>
+                                                        Hacienda del cielo オープン<br />
+                                                        RIGOLETTO spice marcket オープン
+                                                    </p>
+                                                </div>
+                                                <div class="history__img">
+                                                    <img src="img/about/history_img03.webp">
+                                                </div>
+                                                <div class="history__summary">
+                                                    <div class="history__summary-title">NO MSG<br />化学調味料不使用を全店舗でスタート</div>
+                                                </div>
+                                                <button type="button" class="history__btn" aria-haspopup="dialog" aria-controls="history-modal">
+                                                    <span class="history__btn-txt">VIEW MORE</span>
+                                                    <span class="history__btn-arrow">
+                                                        <svg viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7.33529 0.707113L11.1065 4.47835L7.33529 8.24959M10.6351 4.47835L0.499922 4.47835" stroke="white" stroke-linecap="square"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="history__modal-result">17:00以降ディナータイム<br />食事・ドリンク 全品30% OFF</div>
+                                            <div class="history__modal-detail">
+                                                <p>
+                                                    震災の影響で街全体が自粛ムードに包まれていた当時。「こんな時だからこそ、レストランで少しでも元気になってもらいたい」そんな思いからHUGEは「おかえりなさいキャンペーン」を実施。再びお客様がレストランに足を運ぶきっかけをつくり、テーブルに笑顔を取り戻す取り組みとなりました。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item">
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2014</div>
+                                                    <div class="history__store">2店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        POSILLIPO オープン<br />
+                                                        RIGOLETTO SMOKE GRILL AND BAR オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item">
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2015</div>
+                                                    <div class="history__store">1店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        Las Dos Caras オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2016</div>
+                                                    <div class="history__store">2店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        Tavern on S オープン<br />
+                                                        CUCINA DEL NABUCCO オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2017</div>
+                                                    <div class="history__store">2店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        THE RIGOLETTO オープン<br />
+                                                        SHIBUichi BAKERY オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2018</div>
+                                                    <div class="history__store">1店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>GINGER GRASS オープン</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item history__item--important">
+                                            <div class="history__meta">
+                                                <div class="history__year">2019</div>
+                                                <div class="history__store">2店舗</div>
+                                            </div>
+                                            <div class="history__main">
+                                                <div class="history__des">
+                                                    <p>
+                                                        Madam Mỹ オープン<br />
+                                                        Rigo SPANISH ITALIAN オープン<br />
+                                                        The Tower Tavern オープン<br />
+                                                        QUAYS pacific grill オープン<br />
+                                                        La Coquina オープン
+                                                    </p>
+                                                </div>
+                                                <div class="history__img">
+                                                    <img src="img/about/history_img04.webp">
+                                                </div>
+                                                <div class="history__summary">
+                                                    <div class="history__summary-title">
+                                                        クラフトジン：NUMBER EIGHT GIN<br />
+                                                        クラフトビール：NUMBER NINE BREWERY製造開始
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="history__btn" aria-haspopup="dialog" aria-controls="history-modal">
+                                                    <span class="history__btn-txt">VIEW MORE</span>
+                                                    <span class="history__btn-arrow">
+                                                        <svg viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7.33529 0.707113L11.1065 4.47835L7.33529 8.24959M10.6351 4.47835L0.499922 4.47835" stroke="white" stroke-linecap="square"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="history__modal-result">17:00以降ディナータイム<br />食事・ドリンク 全品30% OFF</div>
+                                            <div class="history__modal-detail">
+                                                <p>
+                                                    震災の影響で街全体が自粛ムードに包まれていた当時。「こんな時だからこそ、レストランで少しでも元気になってもらいたい」そんな思いからHUGEは「おかえりなさいキャンペーン」を実施。再びお客様がレストランに足を運ぶきっかけをつくり、テーブルに笑顔を取り戻す取り組みとなりました。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item history__item--important">
+                                            <div class="history__meta">
+                                                <div class="history__year">2020</div>
+                                                <div class="history__store">3店舗</div>
+                                            </div>
+                                            <div class="history__main">
+                                                <div class="history__des">
+                                                    <p>
+                                                        BETELNUT オープン<br />
+                                                        Comedor de Margarita オープン<br />
+                                                        蕎麦 蘇枋 オープン
+                                                    </p>
+                                                </div>
+                                                <div class="history__img">
+                                                    <img src="img/about/history_img05.webp">
+                                                </div>
+                                                <div class="history__summary">
+                                                    <div class="history__summary-time">2020.4.4〜</div>
+                                                    <div class="history__summary-title">
+                                                        コロナ / 緊急事態宣言に伴い、全店舗休業
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="history__btn" aria-haspopup="dialog" aria-controls="history-modal">
+                                                    <span class="history__btn-txt">VIEW MORE</span>
+                                                    <span class="history__btn-arrow">
+                                                        <svg viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7.33529 0.707113L11.1065 4.47835L7.33529 8.24959M10.6351 4.47835L0.499922 4.47835" stroke="white" stroke-linecap="square"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="history__modal-result">17:00以降ディナータイム<br />食事・ドリンク 全品30% OFF</div>
+                                            <div class="history__modal-detail">
+                                                <p>
+                                                    震災の影響で街全体が自粛ムードに包まれていた当時。「こんな時だからこそ、レストランで少しでも元気になってもらいたい」そんな思いからHUGEは「おかえりなさいキャンペーン」を実施。再びお客様がレストランに足を運ぶきっかけをつくり、テーブルに笑顔を取り戻す取り組みとなりました。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item history__item--important">
+                                            <div class="history__meta">
+                                                <div class="history__year">2021</div>
+                                                <div class="history__store">3店舗</div>
+                                            </div>
+                                            <div class="history__main">
+                                                <div class="history__des">
+                                                    <p>DADAÏ オープン</p>
+                                                </div>
+                                                <div class="history__img">
+                                                    <img src="img/about/history_img06.webp">
+                                                </div>
+                                                <div class="history__summary">
+                                                    <div class="history__summary-time">2021.6.15</div>
+                                                    <div class="history__summary-title">
+                                                        The HUGE CLUB（ザ ヒュージ クラブ）スタート
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="history__btn" aria-haspopup="dialog" aria-controls="history-modal">
+                                                    <span class="history__btn-txt">VIEW MORE</span>
+                                                    <span class="history__btn-arrow">
+                                                        <svg viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7.33529 0.707113L11.1065 4.47835L7.33529 8.24959M10.6351 4.47835L0.499922 4.47835" stroke="white" stroke-linecap="square"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="history__modal-result">17:00以降ディナータイム<br />食事・ドリンク 全品30% OFF</div>
+                                            <div class="history__modal-detail">
+                                                <p>
+                                                    震災の影響で街全体が自粛ムードに包まれていた当時。「こんな時だからこそ、レストランで少しでも元気になってもらいたい」そんな思いからHUGEは「おかえりなさいキャンペーン」を実施。再びお客様がレストランに足を運ぶきっかけをつくり、テーブルに笑顔を取り戻す取り組みとなりました。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item">
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2022</div>
+                                                    <div class="history__store">2店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        THE FRONT ROOM オープン<br />
+                                                        Café Iguana オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item history__item--important">
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2023</div>
+                                                    <div class="history__store">5店舗</div>
+                                                </div>
+                                                <div class="history__main">
+                                                    <div class="history__des">
+                                                        <p>
+                                                            Molé TAQUERIA Y BAR オープン<br />
+                                                            The CRAFT Bar and Grill オープン<br />
+                                                            Osteria IL VIAGGIO オープン<br />
+                                                            LE BISTRO オープン<br />
+                                                            ワインショップ：LA GALERIE オープン
+                                                        </p>
+                                                    </div>
+                                                    <div class="history__img">
+                                                        <img src="img/about/history_img07.webp">
+                                                    </div>
+                                                    <div class="history__summary">
+                                                        <div class="history__summary-time">2023.12</div>
+                                                        <div class="history__summary-title">
+                                                            クラフトビール：IWAI BREWERY<br />
+                                                            製造開始
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="history__btn" aria-haspopup="dialog" aria-controls="history-modal">
+                                                        <span class="history__btn-txt">VIEW MORE</span>
+                                                        <span class="history__btn-arrow">
+                                                            <svg viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M7.33529 0.707113L11.1065 4.47835L7.33529 8.24959M10.6351 4.47835L0.499922 4.47835" stroke="white" stroke-linecap="square"/>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="history__modal-result">17:00以降ディナータイム<br />食事・ドリンク 全品30% OFF</div>
+                                                <div class="history__modal-detail">
+                                                    <p>
+                                                        震災の影響で街全体が自粛ムードに包まれていた当時。「こんな時だからこそ、レストランで少しでも元気になってもらいたい」そんな思いからHUGEは「おかえりなさいキャンペーン」を実施。再びお客様がレストランに足を運ぶきっかけをつくり、テーブルに笑顔を取り戻す取り組みとなりました。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide history__item">
+                                            <div class="history__col">
+                                                <div class="history__meta">
+
+                                                    <div class="history__year">2024</div>
+                                                    <div class="history__store">2店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        THE GRILL TORANOMON オープン<br />
+                                                        IWAI TERRACE オープン<br />
+                                                        Del Mar COMEDOR Y TERRAZA オープン<br />
+                                                        蕎麦 菫 オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2025</div>
+                                                    <div class="history__store">6店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        PIZZERIA IL VICOLO オープン<br />
+                                                        EL RINCON DE MEXICOLA オープン<br />
+                                                        Rigo SPANISH ITALIAN オープン<br />
+                                                        蕎麦 豊田 オープン<br />
+                                                        SOW COFFEE ROASTERS オープン<br />
+                                                        焼肉 たかなわ オープン
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="history__col">
+                                                <div class="history__meta">
+                                                    <div class="history__year">2026</div>
+                                                    <div class="history__store">2店舗</div>
+                                                </div>
+                                                <div class="history__des">
+                                                    <p>
+                                                        Rigo VICTORIA WARD PARK オープン<br />
+                                                        無垢庵 蕎麦 居酒屋 オープン予定
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="history__controls history__controls--sp">
+                                <button type="button" class="history__control-btn history__prev-btn" aria-label="前のスライド">
+                                    <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.74108 0.707163L0.707101 6.74114L6.74108 12.7751M1.46135 6.74114L17.6777 6.74114" stroke="white" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <button type="button" class="history__control-btn history__next-btn" aria-label="次のスライド">
+                                    <svg viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.4367 0.707163L17.4706 6.74114L11.4367 12.7751M16.7164 6.74114L0.50007 6.74114" stroke="white" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="data__keyword">
+                            <div class="data__keyword-paint1">
+                                <picture>
+                                    <source srcset="img/about/data_keyword_paint1_sp.webp" media="(max-width: 450px)">
+                                    <img src="img/about/data_keyword_paint1.webp">
+                                </picture>
+                            </div>
+                            <div class="keyword__content">
+                                <div class="keyword__item keyword__item--concept">
+                                    <div class="keyword__item-wrapper">
+                                        <h3 class="keyword__title">オリジナルコンセプト業態</h3>
+                                        <div class="keyword__main">
+                                            <div class="keyword__work">
+                                                <span class="keyword__work-num">14</span>
+                                                <span class="keyword__work-txt">種類</span>
+                                            </div>
+                                            <div class="keyword__des">
+                                                <p>
+                                                    全ての業態やブランドは、<br class="is__PC" />
+                                                    HUGEが<br class="is__SP" />コンセプトメイクから手がけた完全オリジナル。<br />
+                                                    他にはない、唯一無二の業態を創造し続けています。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="keyword__img keyword__img--01">
+                                        <img src="img/about/keyword_img01.svg">
+                                    </div>
+                                    <div class="keyword__bg keyword__bg--01">
+                                        <img src="img/about/keyword_bg01.webp">
+                                    </div>
+                                </div>
+                                <div class="keyword__item keyword__item--brand">
+                                    <div class="keyword__item-wrapper">
+                                        <h3 class="keyword__title">オリジナルブランド</h3>
+                                        <div class="keyword__main">
+                                            <div class="keyword__work">
+                                                <span class="keyword__work-num">100</span>
+                                                <span class="keyword__work-txt">%</span>
+                                            </div>
+                                            <div class="keyword__des">
+                                                <p>
+                                                    レストラン、プロダクトだけでなく、<br class="is__SP" />メニューやデザイン至るまで、<br class="is__SP" />
+                                                    すべてが自社開発のオリジナル。<br />
+                                                    HUGEならではの独自の価値を提供しています。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="keyword__img keyword__img--02">
+                                        <img src="img/about/keyword_img02.svg">
+                                    </div>
+                                    <div class="keyword__bg keyword__bg--02">
+                                        <img src="img/about/keyword_bg02.webp">
+                                    </div>
+                                </div>
+                                <div class="keyword__item keyword__item--store">
+                                    <div class="keyword__item-wrapper">
+                                        <h3 class="keyword__title">店舗数</h3>
+                                        <div class="keyword__main">
+                                            <div class="keyword__work">
+                                                <span class="keyword__work-num">47</span>
+                                                <span class="keyword__work-txt">店舗</span>
+                                            </div>
+                                            <div class="keyword__des">
+                                                <p>
+                                                    2006年から、どのような時代背景であっても欠かす<br class="is__SP" />ことなく、新店舗をオープンし続けてきたHUGE。<br class="is__SP" />これからも挑戦をし続けていきます。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="keyword__img keyword__img--03">
+                                        <img src="img/about/keyword_img03.svg">
+                                    </div>
+                                    <div class="keyword__bg keyword__bg--03">
+                                        <img src="img/about/keyword_bg03.webp">
+                                    </div>
+                                </div>
+                                <div class="keyword__item keyword__item--staff">
+                                    <div class="keyword__item-wrapper">
+                                        <h3 class="keyword__title">スタッフ数</h3>
+                                        <div class="keyword__main">
+                                            <div class="keyword__work">
+                                                <span class="keyword__work-num">1704</span>
+                                                <span class="keyword__work-txt">人</span>
+                                            </div>
+                                            <div class="keyword__des">
+                                                <p>
+                                                    HUGEを動かすのは“人”。表舞台も裏方も、<br />
+                                                    ホスピタリティとチームワークを<br class="is__SP" />大切にする多くのスタッフが、<br />
+                                                    店舗やクオリティを支えています。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="keyword__img keyword__img--04">
+                                        <img src="img/about/keyword_img04.svg">
+                                    </div>
+                                    <div class="keyword__bg keyword__bg--04">
+                                        <img src="img/about/keyword_bg04.webp">
+                                    </div>
+                                </div>
+                                <div class="keyword__item keyword__item--origin">
+                                    <div class="keyword__item-wrapper">
+                                        <div class="keyword__main">
+                                            <h3 class="keyword__title">出身国</h3>
+                                            <div class="keyword__work">
+                                                <span class="keyword__work-num">48</span>
+                                                <span class="keyword__work-txt">カ国</span>
+                                            </div>
+                                        </div>
+                                        <div class="keyword__des">
+                                            <p>
+                                                HUGEでは、多様な国籍のスタッフが活躍中。<br />
+                                                文化や背景の違いを尊重し合いながら、グローバルな<br class="is__SP" />感性を持ったチームづくりを行っています。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="keyword__img keyword__img--05">
+                                        <img src="img/about/keyword_img05.svg">
+                                    </div>
+                                    <div class="keyword__bg keyword__bg--05">
+                                        <img src="img/about/keyword_bg05.webp">
+                                    </div>
+                                </div>
+                                <div class="keyword__item keyword__item--certified">
+                                    <div class="keyword__item-wrapper">
+                                        <div class="keyword__main">
+                                            <h3 class="keyword__title">JSA認定<br />ソムリエ在籍数</h3>
+                                            <div class="keyword__work">
+                                                <span class="keyword__work-num">54</span>
+                                                <span class="keyword__work-txt">名</span>
+                                            </div>
+                                        </div>
+                                        <div class="keyword__des">
+                                            <p>
+                                                JSA（日本ソムリエ協会）認定ソムリエが多数在籍。<br class="is__SP" />専門的な知識と感性を活かし、<br class="is__SP" />ワインの魅力と楽しみ方を多面的に伝えています。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="keyword__img keyword__img--06">
+                                        <img src="img/about/keyword_img06.svg">
+                                    </div>
+                                    <div class="keyword__bg keyword__bg--06">
+                                        <img src="img/about/keyword_bg06.webp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="keyword__chart">
+                                <div class="keyword__chart-item">
+                                    <div class="keyword__chart-label">平均年齢</div>
+                                    <div class="keyword__chart-content">
+                                        <div class="keyword__chart-shape">
+                                            <img src="img/about/keyword_chart.webp">
+                                        </div>
+                                        <div class="keyword__chart-main">
+                                            <div class="keyword__chart-number">32<span>歳</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="keyword__chart-item">
+                                    <div class="keyword__chart-label">男女比</div>
+                                    <div class="keyword__chart-content">
+                                        <div class="keyword__chart-shape">
+                                            <img src="img/about/keyword_chart.webp">
+                                        </div>
+                                        <div class="keyword__chart-main">
+                                            <div class="keyword__chart-detail">
+                                                <div class="keyword__chart-sex">男性</div>
+                                                <div class="keyword__chart-number">50<span>%</span></div>
+                                            </div>
+                                            <div class="keyword__chart-detail">
+                                                <div class="keyword__chart-sex">女性</div>
+                                                <div class="keyword__chart-number">50<span>%</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="keyword__chart-item">
+                                    <div class="keyword__chart-label">新卒･中途比率</div>
+                                    <div class="keyword__chart-content">
+                                        <div class="keyword__chart-shape">
+                                            <img src="img/about/keyword_chart.webp">
+                                        </div>
+                                        <div class="keyword__chart-main">
+                                            <div class="keyword__chart-detail">
+                                                <div class="keyword__chart-sex">新卒</div>
+                                                <div class="keyword__chart-number">40<span>%</span></div>
+                                            </div>
+                                            <div class="keyword__chart-detail">
+                                                <div class="keyword__chart-sex">中途</div>
+                                                <div class="keyword__chart-number">60<span>%</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data__keyword-paint2">
+                                <picture>
+                                    <source srcset="img/about/data_keyword_paint2_sp.webp" media="(max-width: 450px)">
+                                    <img src="img/about/data_keyword_paint2.webp">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data__paint">
+                        <img src="img/about/data_paint.webp">
+                    </div>
+                    <div class="hx10"></div>
+                </div>
+                <div class="about__company">
+                    <div class="container">
+                        <div class="company__inner">
+                            <div class="company__intro">
+                                <div class="company__concept">
+                                    <div class="company__concept-item">
+                                        <div class="company__concept-label">
+                                            <span class="company__concept-label-en">MISSION</span>
+                                            <span class="company__concept-label-jp">ミッション</span>
+                                        </div>
+                                        <h3 class="company__concept-title">街の資産</h3>
+                                    </div>
+                                    <div class="company__concept-item">
+                                        <div class="company__concept-label">
+                                            <span class="company__concept-label-en">VISION</span>
+                                            <span class="company__concept-label-jp">ビジョン</span>
+                                        </div>
+                                        <h3 class="company__concept-title">百年品質</h3>
+                                    </div>
+                                </div>
+                                <div class="company__message">
+                                    <p>
+                                        創業から20年、<br class="is__TBshow" />私たちは「街の資産をつくる」という<br class="is__SP" />信念を胸に歩んできました。<br />
+                                        どんな時代の変化があっても、<br class="is__SP" />街に根ざし、人々の記憶に残る<br class="is__SP" />“百年品質”のレストランを<br class="is__SP" />目指してきたのが、<br class="is__TBhide" />
+                                        HUGEの原点です。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="company__value">
+                                <h3 class="value__title">
+                                    10 Values of HUGE
+                                    <span>HUGE10の約束</span>
+                                </h3>
+                                <div class="value__content">
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">01</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">それって<br />“ワクワク・ドキドキ”<br />できるの?</h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>私たちは元気の周りにしか元気は集まらないと考えています。レストランの役割の根幹は人が集まり、食べたり飲んだりして人が元気になる場所です。もてなす側の私たちが、ワクワク・ドキドキして元気でいなければ、お客様も、ワクワク・ドキドキできず、お店の元気も生まれず、活気づかない。お店づくり、メニューづくり、日々のサービスにおいて、どれだけ大変な準備が必要だとしても、ワクワクドキドキを優先する。そんなことがお客様の心をうつ何かとなり、レストランが元気になっていく。私たちはこれからも「それってワクワク・ドキドキできるの」かどうかを大切にしていきます。</p>
+                                        </div>
+                                    </div>
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">02</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">
+                                                あなたと、あなたの周りは<br />Nice guy? Sweetie?
+                                            </h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>Nice guy/Sweetieという言葉は「ルックス」のことではなく、考え方や価値観といった内面のことを指します。ホスピタリティサービスであるレストランにおいて、スタッフを探そうと何回も顔を上げても目が合わなかったりする、挨拶のトーンの感じが悪かったりする、人には向き・不向きがありますが、その姿勢はHUGEの価値観とは合いません。「人の目を見て話せるか、心で会話できているか」そんな価値観を大事だと思う"いい奴"と一緒に、これからも最高のレストランをつくっていきたいと思っています。</p>
+                                        </div>
+                                    </div>
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">03</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">
+                                                オープンで正直な<br />コミュニケーションからしか<br />良好な人間関係は生まれない
+                                            </h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>言うべきことを言わず曖昧にしておく方が残酷であり、相手のためにはならないと思っています。間違ってしまったことは愛情をもって伝える。言いにくいことほど本人にきちんと伝えてあげる。お客様の視点にたったときに気になることは言葉に出していきます。そしてもちろん、上手くいったことも最大限に伝えて、背中を押してあげる。杓子定規な言葉に人の心は動かされません。「裏表のない」オープンなコミュニケーションこそが人間関係を良好なものにさせていくと同時に、リアルな問題も解決していくと信じています。</p>
+                                        </div>
+                                    </div>
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">04</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">
+                                                “おもてなし”とは、<br />目を合わせる･ほほえむ･抱きしめる<br />の受け渡し
+                                            </h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>お母さんが生まれた赤ちゃんにまずすることは、なんだと思いますか？実はそれが「目を合わせる、ほほえむ、抱きしめる」なんです。私たちはおもてなしの全てもここからだと思っています。まず、目を合わせる。するとお客様の気持ちが分かる。そして、ほほ笑んで、抱きしめるような気持ちを持ってお客様に接する。そうして伝わる愛情や真剣さ、心配りこそが"おもてなし"だと考えています。</p>
+                                        </div>
+                                    </div>
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">05</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">
+                                                一つのことを<br />“とことん極められる事”が一番
+                                            </h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>「あなたはどんな人ですか？」HUGEでは自信をもって答えられる人が多いと思います。"誰よりもおいしいピザを作れるピッツァイオーロです！""お客様のリクエストに応えて、美味しいカクテルを作れるバーテンダーです！"成熟されてきた世の中においてこれからは専門職の時代が来ると思っています。マルチな能力も必要かもしれませんが、自分に自信を持てる武器を磨いてみることが時代に求められていくことかもしれません。HUGEには自分の技術を高め発揮するステージとそれを全力で応援してくれる仲間がいます。</p>
+                                        </div>
+                                    </div>
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">06</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">
+                                                あくなき探究心を持とう!
+                                            </h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>何か心が動くことがあれば、ぜひ探求してほしいと思います。HUGEが自信をもってお伝えできる魅力のひとつは「学ぶ機会」がたくさんあることです。サービスやワイン、バーテンダー、調理、ビジネス研修など自社のスペシャリストによる講習があり、自分の興味のある領域だけ、選択し、受講できる環境があります。本気で学んでみたいという、あらゆる探求心を尊重し、応援する会社でありたいと思います。</p>
+                                        </div>
+                                    </div>
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">07</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">
+                                                出る杭は叩くのではなく<br />引き伸ばそう!!
+                                            </h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>チームをつくっていくうえで、出る杭とは何か。それは、才能であり、個性であり、その人が好きなこと、得意なことです。一方であらゆるタレント、プロフェッショナリズムがチームに集まっていても、それを自由に表現できる場がなければ、人もチームも成長していきません。自分にはやりたいことがあるという人を迎え入れたい。やってもいいんだと思ってもらえるような環境を整えて、そして育てていきたい。それこそが、出る杭を叩くのではなく引き延ばすということだと思っています。</p>
+                                        </div>
+                                    </div>
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">08</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">
+                                                アンティシペーション<br />リコグニション<br />オペレーション
+                                            </h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>HUGEはオペレーションを大事にしています。挨拶、オーダー、提供までの時間や質、そしてお会計を間違えることなく行えたかどうか。すなわち「きちんとお店が回ったか」ということです。そして完璧にオペレーションを回すことはできないとも考えています。ただし、オペレーションを潤滑に回していく要素があります。それが、アンティシペーション＝事前予知能力であり、リゴニクション＝顧客認知能力です。お客様がしてほしいと思われることを事前に察知して、してさしあげること。顧客について、興味を持ち、サービスを通じて信頼関係を築いていくこと。そういった能力を養い、磨いていくことを大切にして、お客様が満足するオペレーションを追求していきたいと考えています。</p>
+                                        </div>
+                                    </div>
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">09</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">
+                                                絶対的な顧客目線さえあれば、<br />他はあとからついてくる
+                                            </h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>HUGEは「個店主義」。外装・内装、メニューに至るまで、1店舗1店舗違います。お客様がお店に訪れたときに何かを感じてもらいたいと思っているからです。「なんだこのすごい大きなワインセラーは!?オープンキッチンは!?」一方でそういったお店は効率がいいとは言えません。私たちの店づくりは、オペレーション重視ではなく顧客目線を重視しているからです。すべてにおいて、「それって顧客目線ではどうなの？」「どんなお客様がイイねと言ってくれるの？」と問いつづけています。原価の計算や効率からではなく、それが楽しいか、価値があるか。お客様にワクワク・ドキドキしていただければ、他はあとからついてくると思っています。</p>
+                                        </div>
+                                    </div>
+                                    <div class="value__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="value-modal">
+                                        <div class="value__order">10</div>
+                                        <div class="value__subtitle-wrap">
+                                            <h4 class="value__subtitle">
+                                                自分の“得意技”はなんだ？<br />そこにすべての時間と<br />エネルギーを集中させよう!
+                                            </h4>
+                                            <div class="value__more">
+                                                <span class="value__more-label">続きを見る</span>
+                                                <span class="value__more-arrow" aria-hidden="true">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.17376 0.5L12.7071 0.5V9.03333M12.1738 1.03333L0.707092 12.5" stroke="white" stroke-linecap="square"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="value__detail">
+                                            <p>人の名前をすぐに覚えられる、バランスにこだわったキレイな盛り付け、絶妙な肉の火入れ加減、ワイン・カクテルの知識なら負けない、最高のスマイルですぐに打ち解けられる。ひとりひとりにそれぞれ違った”良さ”があると私たちは信じています。一方で、得意技が分からずにもがいているということもよくあることです。得意技に気づくというのは、自分自身ではない場合も多いです。HUGEには、周りの仲間がその人の強みをポジティブに伝える文化があり、自分では気付いていなかった得意技を発見できる環境です。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="company__table">
+                                <div class="company__dl">
+                                    <div class="company__dt">
+                                        <span class="company__dt-en">IDENTITY</span>
+                                        <span class="company__dt-jp">アイデンティティ</span>
+                                    </div>
+                                    <div class="company__dd">世界中の鼓動が集まる<br class="is__SP" />ホスピタリティカンパニー</div>
+                                </div>
+                                <div class="company__dl">
+                                    <div class="company__dt">
+                                        <span class="company__dt-en">PHILOSOPHY</span>
+                                        <span class="company__dt-jp">哲学</span>
+                                    </div>
+                                    <div class="company__dd">そこまでやるか、をやる。</div>
+                                </div>
+                                <div class="company__dl">
+                                    <div class="company__dt">
+                                        <span class="company__dt-en">CONCEPT</span>
+                                        <span class="company__dt-jp">コンセプト</span>
+                                    </div>
+                                    <div class="company__dd">個店主義</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__company-paint">
+                        <img src="img/about/company_paint.webp" alt="">
+                    </div>
+                </div>
+                <div class="about__natural">
+                    <div class="hx10"></div>
+                    <div class="container">
+                        <div class="natural__inner">
+                            <div class="natural__heading">
+                                <h2 class="about__title">
+                                    <span class="about__title-en">ALL NATURAL</span>
+                                    <span class="about__title-jp">食への想い</span>
+                                </h2>
+                            </div>
+                            <div class="natural__content">
+                                <div class="natural__item">
+                                    <div class="natural__shape">
+                                        <img src="img/about/natural_img01.svg">
+                                    </div>
+                                    <div class="natural__main">
+                                        <h3 class="natural__title">化学調味料不使用</h3>
+                                        <div class="natural__txt">
+                                            <p>うまみ調味料の主成分であるグルタミン酸ナトリウムは一切添加しておりません。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="natural__item">
+                                    <div class="natural__shape">
+                                        <img src="img/about/natural_img02.svg">
+                                    </div>
+                                    <div class="natural__main">
+                                        <h3 class="natural__title">低温圧搾抽出法油 低トランス脂肪酸</h3>
+                                        <div class="natural__txt">
+                                            <p>HUGEで使用しているオリーブオイル及びひまわり油は、国内基準でトランス脂肪酸を含まない、低温圧搾抽出法で搾られた一番搾りの油のみを使用しております。</p>
+                                            <p>※一部のオリーブオイルは飽和脂肪酸を1.5g、又は10％以上含む</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="natural__item">
+                                    <div class="natural__shape">
+                                        <img src="img/about/natural_img03.svg">
+                                        <img src="img/about/natural_img04.svg">
+                                    </div>
+                                    <div class="natural__main">
+                                        <h3 class="natural__title">自然製法の塩 オーガニック砂糖</h3>
+                                        <div class="natural__txt">
+                                            <p>自然製法の素材を使用し、化学的に精製された塩・砂糖を使用しません。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="natural__item">
+                                    <div class="natural__shape">
+                                        <img src="img/about/natural_img05.svg">
+                                    </div>
+                                    <div class="natural__main">
+                                        <h3 class="natural__title">πウォーター使用</h3>
+                                        <div class="natural__txt">
+                                            <p>調理用水は、πウォーターを使用しています。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__sustainability">
+                    <div class="hx10"></div>
+                    <div class="container">
+                        <div class="sustainability__inner">
+                            <div class="sustainability__heading">
+                                <h2 class="about__title">
+                                    <span class="about__title-en">SUSTAINABILITY</span>
+                                    <span class="about__title-jp">サステナビリティ</span>
+                                </h2>
+                            </div>
+                            <div class="sustainability__content">
+                                <div class="sustainability__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="sustainability-modal" aria-label="詳細を開く">
+                                    <div class="sustainability__img">
+                                        <img src="img/about/sustainability_img01.webp" alt="">
+                                        <span class="sustainability__btn" aria-hidden="true">
+                                            <span class="sustainability__btn-wrap">
+                                                <span class="sustainability__btn-icon"></span>
+                                                <span class="sustainability__btn-txt">MORE</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h3 class="sustainability__title">プラスチックストロー<br />使用廃止</h3>
+                                    <div class="sustainability__detail" hidden>
+                                        <p>2018年より環境問題への配慮から、使い捨てプラスチック製ストローの使用を廃止しております。プラスチックごみは海洋汚染の大きな要因となっており、特にストローのような小さなアイテムは回収や再利用が難しく、野生動物への被害も深刻です。そのため、当店ではドリンクのご提供時に金属製ストローを使用するか、ストローなしでのご提供を基本としております。お客様のご理解とご協力をいただきながら、持続可能な社会の実現に向けて、私たちにできる小さな一歩を積み重ねています。</p>
+                                    </div>
+                                    <div class="sustainability__gallery" hidden>
+                                        <img src="img/img_sdgs06.jpg" alt="">
+                                        <img src="img/img_sdgs07.jpg" alt="">
+                                        <img src="img/img_sdgs09.jpg" alt="">
+                                        <img src="img/img_sdgs13.jpg" alt="">
+                                        <img src="img/img_sdgs14.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sustainability__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="sustainability-modal" aria-label="詳細を開く">
+                                    <div class="sustainability__img">
+                                        <img src="img/about/sustainability_img02.webp">
+                                        <span class="sustainability__btn" aria-hidden="true">
+                                            <span class="sustainability__btn-wrap">
+                                                <span class="sustainability__btn-icon"></span>
+                                                <span class="sustainability__btn-txt">MORE</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h3 class="sustainability__title">アボカドの種をクラフトジンのユニークなボタニカルとして再利用</h3>
+                                    <div class="sustainability__detail" hidden>
+                                        <p>当社が自社蒸留しているクラフトジン「ナンバーエイトジン」では、メキシカン業態の店舗で多く使用されるアボカドの“種”を、ユニークかつサステナブルなボタニカルのひとつとして活用しています。通常であれば廃棄されるアボカドの種に着目し、香りや風味のアクセントとして再利用することで、食品ロスの削減と資源の有効活用を実現しました。店舗で生まれる副産物を新たな価値へと転換するこの取り組みは、持続可能な循環型のものづくりを目指す私たちの姿勢を象徴するものです。驚きと香りを添えた一杯を、ぜひお楽しみください。</p>
+                                    </div>
+                                    <div class="sustainability__gallery" hidden>
+                                        <img src="img/img_sdgs09.jpg" alt="">
+                                        <img src="img/img_sdgs12.jpg" alt="">
+                                        <img src="img/img_sdgs13.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sustainability__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="sustainability-modal" aria-label="詳細を開く">
+                                    <div class="sustainability__img">
+                                        <img src="img/about/sustainability_img03.webp">
+                                        <span class="sustainability__btn" aria-hidden="true">
+                                            <span class="sustainability__btn-wrap">
+                                                <span class="sustainability__btn-icon"></span>
+                                                <span class="sustainability__btn-txt">MORE</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h3 class="sustainability__title">ベジタリアンメニュー</h3>
+                                    <div class="sustainability__detail" hidden>
+                                        <p>ベジタリアンメニューの提供・開発に力を入れています。植物由来の食材を積極的に使用することは、動物性食品の生産に比べて温室効果ガスの排出を抑え、水や土地といった貴重な資源の保全にもつながります。こうした食の選択は、環境への負荷を減らすだけでなく、や豊かな色の選択肢を広げ、健康的なライフスタイルの実現にも貢献すると私たちは考えています。季節の野菜や豆類、穀物などを用いた、見た目にも美しく満足感のある料理を通じて、身体にも地球にもやさしい「おいしいサステナビリティ」をご提供いたします。</p>
+                                    </div>
+                                    <div class="sustainability__gallery" hidden>
+                                        <img src="img/img_sdgs03.jpg" alt="">
+                                        <img src="img/img_sdgs04.jpg" alt="">
+                                        <img src="img/img_sdgs09.jpg" alt="">
+                                        <img src="img/img_sdgs15.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sustainability__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="sustainability-modal" aria-label="詳細を開く">
+                                    <div class="sustainability__img">
+                                        <img src="img/about/sustainability_img04.webp">
+                                        <span class="sustainability__btn" aria-hidden="true">
+                                            <span class="sustainability__btn-wrap">
+                                                <span class="sustainability__btn-icon"></span>
+                                                <span class="sustainability__btn-txt">MORE</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h3 class="sustainability__title">ダイレクトトレードの<br />コーヒー</h3>
+                                    <div class="sustainability__detail" hidden>
+                                        <p>当店で使用するコーヒー豆は、すべて生産者の顔が見える「ダイレクトトレード」によって仕入れたものです。仲介業者を介さず、生産者と直接つながることで、フェアな価格での取引が実現し、農園の継続的な発展や生産環境の改善にもつながっています。また、トレーサビリティが確保されているため、どこで・誰が・どのように栽培した豆かを把握することができ、品質の高いコーヒーを安定的にお届けすることが可能です。お客様にとっても、生産者にとっても、そして地球環境にとってもやさしい一杯をお楽しみください。</p>
+                                    </div>
+                                    <div class="sustainability__gallery" hidden>
+                                        <img src="img/img_sdgs01.jpg" alt="">
+                                        <img src="img/img_sdgs08.jpg" alt="">
+                                        <img src="img/img_sdgs12.jpg" alt="">
+                                        <img src="img/img_sdgs17.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sustainability__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="sustainability-modal" aria-label="詳細を開く">
+                                    <div class="sustainability__img">
+                                        <img src="img/about/sustainability_img05.webp">
+                                        <span class="sustainability__btn" aria-hidden="true">
+                                            <span class="sustainability__btn-wrap">
+                                                <span class="sustainability__btn-icon"></span>
+                                                <span class="sustainability__btn-txt">MORE</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h3 class="sustainability__title">コンテスト開催による、スペシャリスト育成</h3>
+                                    <div class="sustainability__detail" hidden>
+                                        <p>当社では、サービス、料理、バーテンダーの3部門において毎年社内コンテストを実施し、各分野のスペシャリスト育成に取り組んでいます。日々の業務に加え、スタッフが目標を持ってスキルを磨く機会を提供することで、現場力の強化とモチベーションの向上を図っています。こうした人材育成は、スタッフの長期的なキャリア形成と働きがいの創出につながると同時に、企業としての持続可能な成長にも寄与します。お客様に最高の体験をお届けするために、私たちは「人」を何より大切に育てています。</p>
+                                    </div>
+                                    <div class="sustainability__gallery" hidden>
+                                        <div class="sustainability__gallery" hidden>
+                                            <img src="img/img_sdgs03.jpg" alt="">
+                                            <img src="img/img_sdgs04.jpg" alt="">
+                                            <img src="img/img_sdgs05.jpg" alt="">
+                                            <img src="img/img_sdgs08.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sustainability__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="sustainability-modal" aria-label="詳細を開く">
+                                    <div class="sustainability__img">
+                                        <img src="img/about/sustainability_img06.webp">
+                                        <span class="sustainability__btn" aria-hidden="true">
+                                            <span class="sustainability__btn-wrap">
+                                                <span class="sustainability__btn-icon"></span>
+                                                <span class="sustainability__btn-txt">MORE</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h3 class="sustainability__title">ビール醸造後の麦芽粕を愛犬に向けて、美味しく活用。</h3>
+                                    <div class="sustainability__detail" hidden>
+                                        <p>NUMBER NINE BREWERYでは、ビール醸造後に残る“スペントグレイン（麦芽粕）”を廃棄せず、食物繊維やたんぱく質、ミネラルが豊富な副産物として活用しています。このサステナブルな取り組みの一環として、自然由来の食材にこだわり、スペントグレインを練り込んだ犬用のクッキーを製造。愛犬にも安心して与えられる、保存料・着色料不使用のおやつです。食品ロスの削減と循環型社会の実現を目指し、私たちは日常の中に「美味しさ」と「やさしさ」が共存する新しい選択肢を提案しています。</p>
+                                    </div>
+                                    <div class="sustainability__gallery" hidden>
+                                        <img src="img/img_sdgs09.jpg" alt="">
+                                        <img src="img/img_sdgs12.jpg" alt="">
+                                        <img src="img/img_sdgs13.jpg" alt="">
+                                        <img src="img/img_sdgs15.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sustainability__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="sustainability-modal" aria-label="詳細を開く">
+                                    <div class="sustainability__img">
+                                        <img src="img/about/sustainability_img07.webp">
+                                        <span class="sustainability__btn" aria-hidden="true">
+                                            <span class="sustainability__btn-wrap">
+                                                <span class="sustainability__btn-icon"></span>
+                                                <span class="sustainability__btn-txt">MORE</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h3 class="sustainability__title">責任ある調達の実施</h3>
+                                    <div class="sustainability__detail" hidden>
+                                        <p>当社では、持続可能な食材調達の実現を目指し、社内に市場での買参権を持つ「青果部」を設置。店舗で使用する野菜や果物の仕入れを一括で管理しています。現在、産地直送で生産者から直接買い付けている青果は全体の51％を超えており、生産者とのフェアで継続的な関係性を築いています。さらに、鮮魚についても北部市場での買い付けに加え、漁師からの直接仕入れも実施。仲介業者を極力介さない責任ある調達によって、食材の鮮度・品質・透明性を確保し、地域と共に持続可能な食の循環を支えています。</p>
+                                    </div>
+                                    <div class="sustainability__gallery" hidden>
+                                        <img src="img/img_sdgs08.jpg" alt="">
+                                        <img src="img/img_sdgs12.jpg" alt="">
+                                        <img src="img/img_sdgs14.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sustainability__item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="sustainability-modal" aria-label="詳細を開く">
+                                    <div class="sustainability__img">
+                                        <img src="img/about/sustainability_img08.webp">
+                                        <span class="sustainability__btn" aria-hidden="true">
+                                            <span class="sustainability__btn-wrap">
+                                                <span class="sustainability__btn-icon"></span>
+                                                <span class="sustainability__btn-txt">MORE</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h3 class="sustainability__title">摘果（間引き）された<br />果物を使ったビール造り</h3>
+                                    <div class="sustainability__detail" hidden>
+                                        <p>NUMBER NINE 当社が運営する「NUMBER NINE BREWERY」では、フードロス削減の観点から、通常は市場に出回らず廃棄されてしまう摘果（間引き）された湘南ゴールドやみかんなどを活用した季節限定のクラフトビールの醸造を行っています。見た目やサイズの理由で流通できない果実にも栄養や風味の魅力はしっかりと残っており、それらを副原料として使用することで、地域の農産物を無駄にせず、食材に新たな価値を与えるサステナブルなビール造りを実現しています。おいしさと循環を両立した取り組みを通じて、持続可能な食とものづくりの可能性を広げています。</p>
+                                    </div>
+                                    <div class="sustainability__gallery" hidden>
+                                        <img src="img/img_sdgs09.jpg" alt="">
+                                        <img src="img/img_sdgs12.jpg" alt="">
+                                        <img src="img/img_sdgs13.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hx20"></div>
+                </div>
+                <div id="place" class="about__place">
+                    <div class="hx18"></div>
+                    <div class="container">
+                        <div class="place__inner">
+                            <div class="section__heading">
+                                <h2 class="section__title">
+                                    <span class="section__title-paint">
+                                        <img src="img/section_ttl_point02.webp">
+                                    </span>
+                                    <span class="section__title-txt">PLACE&<br class="is__SP" />WELFARE</span>
+                                </h2>
+                                <div class="section__title-jp">働く環境・制度・福利厚生</div>
+                            </div>
+                            <div class="place__concept">
+                                <h3 class="place__concept-title">仕事も遊びも<br />夢中になれる</h3>
+                                <div class="place__concept-mark">
+                                    <svg viewBox="0 0 558 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M193.918 66.205H250.614V0H270.658V62.1584C270.658 77.3611 265.455 81.4003 249.255 81.4003H195.274C179.067 81.4003 174.057 77.3611 174.057 62.1584V0H193.92L193.918 66.205Z" fill="black"/>
+                                        <path d="M339.22 15.0134V65.8134H401.311V47.9228H361.981V33.4849H420.793V62.1603C420.793 77.363 415.769 81.4022 399.588 81.4022H340.571C324.376 81.4022 319.367 77.363 319.367 62.1603V19.2437C319.367 3.8443 324.571 0 340.571 0H399.588C415.013 0 420.793 3.65681 420.793 18.2804V23.6765H401.311V15.0152H339.22V15.0134Z" fill="black"/>
+                                        <path d="M469.505 0H558V14.4398H489.554V33.4849H528.884V47.9228H489.554V66.205H558V81.4022H469.505V0Z" fill="black"/>
+                                        <path d="M86.0455 0V26.1323H18.5907V0H0V81.4003H18.5907V39.6402H104.642V0H86.0455Z" fill="#808080"/>
+                                        <path d="M104.642 57.3965H86.0454V81.4015H104.642V57.3965Z" fill="#808080"/>
+                                        <path d="M20.7168 81.4003V41.7601H106.76V0H125.351V81.4022H106.76V55.2736H39.3019V81.4022L20.7168 81.4003ZM39.3019 0H20.7168V24.005H39.3019V0Z" fill="black"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="place__content">
+                                <div class="place__group">
+                                    <h3 class="place__title">出る杭は引き伸ばそう！<br class="is__SP" />希望に合わせた成長環境 </h3>
+                                    <div class="place__item">
+                                        <div class="place__img">
+                                            <img src="img/about/place_img01.webp">
+                                        </div>
+                                        <div class="place__main">
+                                            <div class="place__label">自由選択性の講習会実施！</div>
+                                            <div class="place__txt">
+                                                <p>
+                                                    サービス、料理、ワイン、バーテンダー、英語学習、マネジメントなどの講習会を開催しています。ポジションに関わりなく受講できるため、新たな知識や技術を身につけることで、自分の強みを増やし、チャンスを広げていくことができます。全ての勉強会、講習はそれぞれ自分のやりたいことに沿って自身で選択して受講してもらいます。これを受けなければならないというものはありません。それぞれの進みたい道によって選択し受講しています。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="place__detail">
+                                        <div class="place__detail-title">その他の研修制度</div>
+                                        <div class="place__detail-content">
+                                            <div class="place__detail-item">
+                                                <div class="place__detail-label">新入社員研修</div>
+                                                <div class="place__detail-txt">
+                                                    <ul>
+                                                        <li>入社研修（4月1日～3日間）</li>
+                                                        <li>入社半年後研修</li>
+                                                        <li>入社1年目研修</li>
+                                                    </ul>
+                                                    <p>上記の通り、定期的な実施をしており、研修や面談を通してフォローアップをしています。店舗配属後は先輩社員がつき、指導・サポートをしています。</p>
+                                                </div>
+                                            </div>
+                                            <div class="place__detail-line"></div>
+                                            <div class="place__detail-item">
+                                                <div class="place__detail-label">マネジメント研修</div>
+                                                <div class="place__detail-txt">
+                                                    <p>
+                                                        職位や入社年次に応じて、リーダーシップやマネジメントを学ぶ勉強会を実施。店長やシェフなど次世代リーダーを育てるためのプロフェッショナルプログラムなども
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="place__detail-line"></div>
+                                            <div class="place__detail-item">
+                                                <div class="place__detail-label">HUGE理念研修</div>
+                                                <div class="place__detail-txt">
+                                                    <p>
+                                                        未来の実施内容として、HRチームを中心にHUGEの理念がよりいっそう社員に浸透していくような研修を検討中です。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="place__group">
+                                    <h3 class="place__title">遊びも本気！<br class="is__SP" />休日休暇を充実させる制度</h3>
+                                    <div class="place__item">
+                                        <div class="place__img">
+                                            <img src="img/about/place_img02.webp">
+                                        </div>
+                                        <div class="place__main">
+                                            <div class="place__des">
+                                                <div class="place__label">HUGE Holidays</div>
+                                                <div class="place__txt">
+                                                    <p>
+                                                        入社半年後以降から、半年ごとに最低4日間の連続休暇を取得できます。前期分と後期分をくっつけて長期休みにすることも可能です！
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="place__des">
+                                                <div class="place__label">保養所利用</div>
+                                                <div class="place__txt">
+                                                    <p>
+                                                        東急ハーヴェストクラブ／SANU 2nd Homeが利用可能です。多数の社員が活躍しており同僚や家族と英気を養っています！
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="place__item">
+                                        <div class="place__img">
+                                            <img src="img/about/place_img03.webp">
+                                        </div>
+                                        <div class="place__main">
+                                            <div class="place__des">
+                                                <div class="place__label">30％ディスカウント！</div>
+                                                <div class="place__txt">
+                                                    <p>
+                                                        全店舗のお食事代が30％ディスカウントになったり、社内販売オンラインショップにてHUGEで使用している調味料やワインなどが社員だけの特別価格で購入できたりと、HUGE社員ならではの割引制度が活用できます。
+                                                    </p>
+                                                    <p>
+                                                        勤務時間以外にぜひ活用して仕事と遊びを充実させてください！
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="place__detail">
+                                        <div class="place__detail-title">その他の休日休暇制度</div>
+                                        <div class="place__detail-content">
+                                            <div class="place__detail-txt">
+                                                <ul>
+                                                    <li>年間休日125日・有給休暇・夏季休暇・冬期休暇・産前産後休業／育児休業・慶弔休暇</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="place__group">
+                                    <h3 class="place__title">社員が永く居続けられる<br class="is__SP" />会社に！福利厚生の充実</h3>
+                                    <div class="place__item">
+                                        <div class="place__img">
+                                            <img src="img/about/place_img04.webp">
+                                        </div>
+                                        <div class="place__main">
+                                            <div class="place__label">社員支援制度</div>
+                                            <div class="place__txt">
+                                                <p>
+                                                    一生付き合っていくという気持ちで社員を迎え入れるHUGE。福利厚生面として以下の制度があります。
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        保育所利用料補助制度※規定あり
+                                                    </li>
+                                                    <li>
+                                                        結婚／出産お祝い金支給
+                                                    </li>
+                                                    <li>
+                                                        永年勤続表彰
+                                                    </li>
+                                                    <li>
+                                                        各種保険完備（雇用・労災・健康・厚生年金）
+                                                    </li>
+                                                    <li>
+                                                        健康診断
+                                                    </li>
+                                                    <li>
+                                                        企業型確定拠出年金
+                                                    </li>
+                                                    <li>
+                                                        従業員持株会
+                                                    </li>
+                                                    <li>
+                                                        一律住宅手当：20,000円～30,000円
+                                                    </li>
+                                                    <li>
+                                                        一律通勤手当：0円～40,000円
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place__paint">
+                            <img src="img/about/place_paint.webp">
+                        </div>
+                    </div>
+                    <div class="hx15"></div>
+                </div>
+                <div id="business" class="about__business">
+                    <div class="hx12"></div>
+                    <div class="container">
+                        <div class="business__inner">
+                            <div class="section__heading">
+                                <h2 class="section__title">
+                                    <span class="section__title-paint">
+                                        <img src="img/section_ttl_point03.webp">
+                                    </span>
+                                    <span class="section__title-txt">BUSINESS</span>
+                                </h2>
+                                <div class="section__title-jp">事業内容</div>
+                            </div>
+                            <div class="business__content">
+                                <div class="business__top">
+                                    <div class="business__img">
+                                        <img src="img/business_img01.webp">
+                                    </div>
+                                    <div class="business__main">
+                                        <h3 class="business__title">レストラン事業</h3>
+                                        <div class="business__lead">
+                                            100％オリジナルの<br />レストランをプロデュース
+                                        </div>
+                                        <div class="business__txt">
+                                            <p>
+                                                HUGEにはひとつとして同じレストランはありません。<br />
+                                                同じコンセプトの業態でも、お店の内装・メニュー・スタッフのユニフォームに至るまで全て異なります。メニュー作りも本部主導で行うものはありません。それぞれの店舗でコンセプトに合わせてそれぞれの個性を引き出すメニュー作りを行っています。<br />
+                                                社内には毎日野菜や魚介類を市場に仕入れに行く部隊もあり、その時々の旬の食材を仕入れることで、その日のスペシャルメニューが完成されます。個人店のように一からレストランを創り、運営にも携わっていく。経営者としての力が身に着く環境です。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="business__bottom">
+                                    <div class="business__item">
+                                        <div class="business__img">
+                                            <img src="img/business_img02.webp">
+                                        </div>
+                                        <div class="business__main">
+                                            <h3 class="business__title">ウェディング&イベント事業</h3>
+                                            <div class="business__txt">
+                                                <p>
+                                                    美味しいお料理で大切なゲストをおもてなしする結婚式。挙式や披露宴は形式ばらずにアットホームな雰囲気で過ごす贅沢な時間。二人の感謝の気持ちを伝える笑顔あふれる一日を心込めて作り上げています。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="business__item">
+                                        <div class="business__img">
+                                            <img src="img/business_img03.webp">
+                                        </div>
+                                        <div class="business__main">
+                                            <h3 class="business__title">オリジナルプロダクト事業</h3>
+                                            <div class="business__txt">
+                                                <p>
+                                                    レストランを営む私たちだからこそ生まれる、こだわりと美味しさ。素材選びから背景のストーリーまで大切にしたプロダクトを手がけています。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="business__paint">
+                            <img src="img/about/business_paint.webp">
+                        </div>
+                    </div>
+                    <div class="hx10"></div>
+                </div>
+            </div>
+            <section class="gallery">
+                <div class="hx20"></div>
+                <div class="gallery__inner">
+                    <div class="gallery__content">
+                        <div class="swiper gallery__slider gallery__slider--ltr">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img01-1.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img01-2.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img01-3.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img01-4.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img01-1.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img01-2.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img01-3.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img01-4.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper gallery__slider gallery__slider--rtl">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img02-1.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img02-2.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img02-3.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img02-4.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img02-1.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img02-2.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img02-3.webp" alt="">
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <img src="img/gallery_img02-4.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__paint">
+                        <img src="img/gallery_paint.webp">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="value-modal" id="value-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="value-modal-title">
+            <div class="value-modal__backdrop" tabindex="-1"></div>
+            <div class="value-modal__panel">
+                <button type="button" class="value-modal__close" aria-label="閉じる">
+                    <span class="value-modal__close-line"></span>
+                    <span class="value-modal__close-line"></span>
+                </button>
+                <div class="value-modal__body">
+                    <div class="value-modal__icon" aria-hidden="true"></div>
+                    <div class="value-modal__order"></div>
+                    <h3 id="value-modal-title" class="value-modal__title"></h3>
+                    <div class="value-modal__detail" id="value-modal-detail"></div>
+                </div>
+            </div>
+        </div>
+        <div class="history-modal" id="history-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="history-modal-title">
+            <div class="history-modal__backdrop" tabindex="-1"></div>
+            <div class="history-modal__panel">
+                <button type="button" class="history-modal__close" aria-label="閉じる">
+                    <span class="history-modal__close-line"></span>
+                    <span class="history-modal__close-line"></span>
+                </button>
+                <div class="history-modal__inner">
+                    <div class="history-modal__media">
+                        <img src="" alt="" class="history-modal__img">
+                    </div>
+                    <div class="history-modal__body">
+                        <div class="history-modal__main">
+                            <div class="history-modal__meta">
+                                <div class="history-modal__date"></div>
+                                <h3 id="history-modal-title" class="history-modal__title"></h3>
+                            </div>
+                            <div class="history-modal__result"></div>
+                        </div>
+                        <div class="history-modal__detail" id="history-modal-detail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sustainability-modal" id="sustainability-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="sustainability-modal-title">
+            <div class="sustainability-modal__backdrop" tabindex="-1"></div>
+            <div class="sustainability-modal__panel">
+                <button type="button" class="sustainability-modal__close" aria-label="閉じる">
+                    <span class="sustainability-modal__close-line"></span>
+                    <span class="sustainability-modal__close-line"></span>
+                </button>
+                <div class="sustainability-modal__inner">
+                    <div class="sustainability-modal__media">
+                        <img src="" alt="" class="sustainability-modal__img">
+                    </div>
+                    <div class="sustainability-modal__body">
+                        <div class="sustainability-modal__main">
+                            <h3 id="sustainability-modal-title" class="sustainability-modal__title"></h3>
+                            <div class="sustainability-modal__detail" id="sustainability-modal-detail"></div>
+                        </div>
+                        <div class="sustainability-modal__gallery" hidden></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTAIN_END -->
+        <footer class="footer">
+            <div class="hx14"></div>
+            <div class="footer__inner">
+                <div class="footer__top">
+                    <div class="footer__title">Make it Wow!</div>
+                    <div class="footer__main">
+                        <div class="footer__menu">
+                            <a class="footer__menu-link" href="https://www.huge.co.jp/about/">CONTACT US</a>
+                            <a class="footer__menu-link" href="https://recruit.huge.co.jp/wp-content/themes/custom/assets/doc/privacy-policy.pdf" target="_blank" rel="noopener noreferrer">SITE POLICY</a>
+                            <a class="footer__menu-link" href="https://www.huge.co.jp/contact/">PRIVACY POLICY</a>
+                        </div>
+                        <div class="footer__sns">
+                            <a class="footer__sns-link" href="https://www.facebook.com/huge.restaurant/" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icon_facebook.svg">
+                            </a>
+                            <a class="footer__sns-link" href="https://www.instagram.com/huge_recruit/reel/C-POCjSyL_j/" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icon_insta.webp">
+                            </a>
+                            <a class="footer__sns-link" href="https://www.youtube.com/@yoshihiroshinkawa" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icon_youtube.svg">
+                            </a>
+                            <a class="footer__sns-link" href="#">
+                                <img src="img/icon_note.svg">
+                            </a>
+                        </div>
+                        <div class="footer__copy">
+                            <p>Copyright © HUGE Co.,Ltd. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__logo">
+                        <div class="footer__mark">HUGE</div>
+                        <div class="footer__recruit">RECRUITING</div>
+                    </div>
+                    <div class="footer__deco">
+                        <img src="img/footer_deco.svg">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/lenis.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
