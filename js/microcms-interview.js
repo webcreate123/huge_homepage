@@ -44,7 +44,7 @@
     const keyword = escapeHtml(item?.Keyword || "");
     const beforeJob = escapeHtml(item?.BeforeJob || "");
     const videoUrl = escapeHtml(item?.Url || "");
-    const poster = `img/interview_img${index + 1}.png`;
+    // const poster = `img/interview_img${index + 1}.png`;
     const beforeJobText = beforeJob ? `${category.beforeJobPrefix}${beforeJob}` : "";
 
     if (!title || !keyword || !videoUrl) return "";
@@ -52,7 +52,7 @@
     return `
       <div class="swiper-slide interview__item js-interview-modal-trigger" role="button" tabindex="0" aria-label="インタビュー詳細を開く">
         <div class="interview__video">
-          <video src="${videoUrl}" muted loop playsinline poster="${poster}"></video>
+          <video src="${videoUrl}" muted loop playsinline></video>
           <span class="interview__btn">
             <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM34 51L53 40L34 29V51Z" fill="#FFD700"/>
