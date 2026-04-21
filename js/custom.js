@@ -2047,7 +2047,6 @@ function setupHomeNewsFromMicroCms() {
   const SERVICE_DOMAIN = "0jd49onovl";
   const API_KEY = "P6rvpRFzdA80h8T8D0U1rGtlbfzgxLJoFOzx";
   const ENDPOINT = "blogs";
-  const { createClient } = microcms;
 
   const escapeHtml = (value) =>
     String(value ?? "")
@@ -2106,18 +2105,20 @@ function setupHomeNewsFromMicroCms() {
     `;
   };
 
-  const client = createClient({
-    serviceDomain: SERVICE_DOMAIN,
-    apiKey: API_KEY,
-  });
+  const url = new URL(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/${ENDPOINT}`);
+  url.searchParams.set("limit", "3");
+  url.searchParams.set("orders", "-publishedAt");
 
-  client
-    .getList({
-      endpoint: ENDPOINT,
-      queries: {
-        limit: 3,
-        orders: "-publishedAt",
-      },
+  fetch(url.toString(), {
+    headers: {
+      "X-MICROCMS-API-KEY": API_KEY,
+    },
+  })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`microCMS response status: ${res.status}`);
+      }
+      return res.json();
     })
     .then((response) => {
       const items = Array.isArray(response?.contents) ? response.contents : [];
