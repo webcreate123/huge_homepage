@@ -2064,7 +2064,6 @@ function init() {
   parttimeAreaStickyBackdrop();
   newgradFaqStickyBackdrop();
   sliderSetting();
-  setupHomeNewsFromMicroCms();
   // about-huge-3min.html（各関数内で #value-modal 等が無ければ no-op）
   valueModalInit();
   historyModalInit();

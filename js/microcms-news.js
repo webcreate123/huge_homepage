@@ -65,7 +65,7 @@ function setupHomeNewsFromMicroCms() {
 
   const url = new URL(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/${ENDPOINT}`);
   url.searchParams.set("limit", "3");
-  url.searchParams.set("orders", "-publishedAt");
+  // url.searchParams.set("orders", "-publishedAt");
   url.searchParams.set("filters", "category[equals]0i1mnp82jk79");
 
   fetch(url.toString(), {
