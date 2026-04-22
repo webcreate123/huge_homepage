@@ -39,7 +39,7 @@
     `;
   };
 
-  fetch(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/${ENDPOINT}?limit=50&orders=publishedAt`, {
+  fetch(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/${ENDPOINT}?limit=100`, {
     headers: {
       "X-MICROCMS-API-KEY": API_KEY,
     },

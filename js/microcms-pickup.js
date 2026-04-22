@@ -68,7 +68,7 @@
 
   try {
     const url = new URL(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/${ENDPOINT}`);
-    url.searchParams.set("orders", "-publishedAt");
+    // url.searchParams.set("orders", "-publishedAt");
     url.searchParams.set("limit", "10");
 
     const xhr = new XMLHttpRequest();
