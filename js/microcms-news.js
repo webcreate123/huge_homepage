@@ -1,4 +1,4 @@
-function setupHomeNewsFromMicroCms() {
+(function setupHomeNewsFromMicroCms() {
   const newsList = document.querySelector(".home__news .news__list");
   if (!newsList) return;
 
@@ -82,10 +82,12 @@ function setupHomeNewsFromMicroCms() {
     .then((response) => {
       const items = Array.isArray(response?.contents) ? response.contents : [];
       const rendered = items.map((item) => createNewsItemHtml(item)).join("");
+      console.log(rendered);
       if (!rendered) return;
       newsList.innerHTML = rendered;
     })
     .catch((error) => {
       console.error("microCMS NEWS fetch failed:", error);
     });
-}
+
+})();
