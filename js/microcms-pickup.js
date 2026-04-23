@@ -1,6 +1,7 @@
 (function setupCareerPickupFromMicroCms() {
   const pickupWrapper = document.querySelector(".pickup__content .swiper-wrapper");
   if (!pickupWrapper) return;
+  const filterType = document.body?.dataset?.pickupType || "";
 
   const SERVICE_DOMAIN = "0jd49onovl";
   const API_KEY = "P6rvpRFzdA80h8T8D0U1rGtlbfzgxLJoFOzx";
@@ -81,7 +82,10 @@
     }
 
     const response = JSON.parse(xhr.responseText || "{}");
-    const items = Array.isArray(response?.contents) ? response.contents : [];
+    const sourceItems = Array.isArray(response?.contents) ? response.contents : [];
+    const items = filterType
+      ? sourceItems.filter((item) => Array.isArray(item?.Type) && item.Type.includes(filterType))
+      : sourceItems;
     const rendered = items.map((item) => createPickupItemHtml(item)).join("");
     if (!rendered) return;
 

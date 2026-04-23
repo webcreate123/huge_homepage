@@ -80,8 +80,8 @@
     })
     .then((response) => {
       const items = Array.isArray(response?.contents) ? response.contents : [];
-      const ordered = [...items].reverse();
-      const rendered = ordered.map((item) => createNewsItemHtml(item)).join("");
+      // const ordered = [...items].reverse();
+      const rendered = items.map((item) => createNewsItemHtml(item)).join("");
       console.log(rendered);
       if (!rendered) return;
       newsList.innerHTML = rendered;
