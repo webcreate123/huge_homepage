@@ -84,11 +84,10 @@
     const response = JSON.parse(xhr.responseText || "{}");
     const sourceItems = Array.isArray(response?.contents) ? response.contents : [];
     const items = filterType
-      ? sourceItems.filter((item) => Array.isArray(item?.Type) && item.Type.includes(filterType))
+      ? sourceItems.filter((item) => Array.isArray(item?.type) && item.type.includes(filterType))
       : sourceItems;
     const rendered = items.map((item) => createPickupItemHtml(item)).join("");
     if (!rendered) return;
-
     pickupWrapper.innerHTML = rendered;
   } catch (error) {
     console.error("microCMS PICK UP fetch failed:", error);
