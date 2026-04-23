@@ -52,6 +52,7 @@
     })
     .then((response) => {
       const items = Array.isArray(response?.contents) ? response.contents : [];
+      // const ordered = [...items].reverse();
       const rendered = items.map((item) => createJobItemHtml(item)).join("");
       if (!rendered) return;
       jobsList.innerHTML = rendered;
